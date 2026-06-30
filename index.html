@@ -13,19 +13,6 @@
       const FIRST_TOUCH_PARAMS_KEY = 'quiz_first_touch_params';
       const LANDING_URL_KEY = 'quiz_landing_url';
       const LANDING_PATH_KEY = 'quiz_landing_pathname';
-      const FIXED_SENTINELA_PARAMS = {
-        sx_variant: 'w',
-        sentinela_variant: 'w',
-        quiz_volume: 'w',
-        offer_variant: 'w',
-        variant: 'w',
-        version: 'w',
-        offer_id: 'white',
-        sentinela_project: 'guiadosmilagres',
-        sentinela_version: 'w',
-        sentinela_offer_id: 'white',
-        project: 'guiadosmilagres'
-      };
 
       function safeGetStorage(type) {
         try {
@@ -61,10 +48,6 @@
           if (value !== null && value !== '') {
             storedParams.set(key, value);
           }
-        });
-
-        Object.keys(FIXED_SENTINELA_PARAMS).forEach(function (key) {
-          storedParams.set(key, FIXED_SENTINELA_PARAMS[key]);
         });
 
         const mergedParams = storedParams.toString();
@@ -3738,27 +3721,6 @@
           }
         });
 
-        const fixedSentinelaParams = {
-          sx_variant: 'w',
-          sentinela_variant: 'w',
-          quiz_volume: 'w',
-          offer_variant: 'w',
-          variant: 'w',
-          version: 'w',
-          offer_id: 'white',
-          sentinela_project: 'guiadosmilagres',
-          sentinela_version: 'w',
-          sentinela_offer_id: 'white',
-          project: 'guiadosmilagres'
-        };
-
-        Object.keys(fixedSentinelaParams).forEach((key) => {
-          if (storedParams.get(key) !== fixedSentinelaParams[key]) {
-            storedParams.set(key, fixedSentinelaParams[key]);
-            changed = true;
-          }
-        });
-
         if (!sessionStorage.getItem(PARAMS_KEY) || !localStorage.getItem(PARAMS_KEY) || changed) {
           setPersistedParams(storedParams);
         }
@@ -3845,20 +3807,6 @@
         persistedParams.forEach((value, key) => {
           targetUrl.searchParams.set(key, value);
         });
-
-        // Carimbo fixo do Sentinela para a atribuição correta da venda do White.
-        // Isso só acrescenta parâmetros nos links/iframes e não altera o fluxo do quiz.
-        targetUrl.searchParams.set('sx_variant', 'w');
-        targetUrl.searchParams.set('sentinela_variant', 'w');
-        targetUrl.searchParams.set('quiz_volume', 'w');
-        targetUrl.searchParams.set('offer_variant', 'w');
-        targetUrl.searchParams.set('variant', 'w');
-        targetUrl.searchParams.set('sentinela_project', 'guiadosmilagres');
-        targetUrl.searchParams.set('sentinela_version', 'w');
-        targetUrl.searchParams.set('sentinela_offer_id', 'white');
-        targetUrl.searchParams.set('project', 'guiadosmilagres');
-        targetUrl.searchParams.set('version', 'w');
-        targetUrl.searchParams.set('offer_id', 'white');
 
         return targetUrl.toString();
       } catch (e) {
