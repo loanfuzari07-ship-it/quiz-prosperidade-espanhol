@@ -7,6 +7,15 @@
   <meta name="format-detection" content="telephone=no" />
   <title>Quiz Espiritual - White</title>
 
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a443bebc2ae486b8a8442df/v4/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload" href="https://cdn.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/6a443b9413c527ca1423b430/main.m3u8" as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+
   <script>
     (function () {
       const PARAMS_KEY = 'quiz_persisted_params';
@@ -67,32 +76,6 @@
       } catch (e) {}
     })();
   </script>
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1950876905791862');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1950876905791862&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    async
-    defer
-  ></script>
 
   <style>
 
@@ -202,8 +185,8 @@
       align-items: center;
     }
 
-    #step-6.step-top.active,
-    #step-8.step-top.active {
+    #step-8.step-top.active,
+    #step-10.step-top.active {
       align-items: flex-start;
     }
 
@@ -687,6 +670,211 @@
         0 12px 24px rgba(94, 60, 8, .11);
     }
 
+    .angel-image-wrap {
+      position: relative;
+      z-index: 3;
+      width: min(100%, 420px);
+      margin: 0 auto 28px;
+      padding: 7px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #f7e3b0 0%, #d5a040 34%, #f7e5b8 100%);
+      box-shadow:
+        0 14px 30px rgba(91, 56, 6, .12),
+        inset 0 1px 0 rgba(255,255,255,.80),
+        inset 0 -1px 0 rgba(146, 88, 7, .14);
+    }
+
+    .angel-image-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: 22px;
+      border: 1px solid rgba(248,233,188,.72);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .angel-image-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1.22 / 1;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(168,110,13,.76);
+      background: #0b1320;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+    }
+
+    .angel-image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      display: block;
+    }
+
+    /* Step 2 — "Qual seu anjo" (imagem larga, 640x258) */
+    #step-2 .angel-image-wrap {
+      width: min(100%, 420px);
+    }
+
+    #step-2 .angel-image-card {
+      aspect-ratio: 640 / 258;
+    }
+
+    /* Step 4 — "Revelação do anjo" (imagem vertical, 564x1002) */
+    #step-4 .angel-image-wrap {
+      width: min(100%, 260px);
+    }
+
+    #step-4 .angel-image-card {
+      aspect-ratio: 564 / 1002;
+    }
+
+    .two-field-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .two-field-row .field-group {
+      margin-bottom: 0;
+    }
+
+    .circular-progress-wrap {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 6px auto 30px;
+    }
+
+    .circular-progress-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .circular-progress-track {
+      fill: none;
+      stroke: rgba(143, 106, 35, .16);
+      stroke-width: 10;
+    }
+
+    .circular-progress-fill {
+      fill: none;
+      stroke: url(#angel-progress-gradient);
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dasharray: 326.726;
+      stroke-dashoffset: 326.726;
+    }
+
+    .circular-progress-percent {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -.01em;
+      color: var(--gold);
+      text-shadow: 0 0 14px rgba(244,216,136,.4);
+    }
+
+    .gold-name {
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .angel-highlight-box {
+      position: relative;
+      max-width: 440px;
+      margin: 4px auto 22px;
+      padding: 22px 26px;
+      border-radius: 18px;
+      background:
+        radial-gradient(circle at 18% 14%, rgba(255,255,255,.55), transparent 30%),
+        linear-gradient(180deg, rgba(255, 248, 232, .92), rgba(247, 236, 210, .85));
+      border: 1px solid rgba(183, 122, 18, .38);
+      box-shadow:
+        0 12px 26px rgba(94, 60, 8, .10),
+        inset 0 1px 0 rgba(255,255,255,.75);
+    }
+
+    .angel-highlight-box::before {
+      content: "✦";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: var(--gold-2);
+      font-size: 15px;
+      background: radial-gradient(circle at 32% 20%, #fff 0%, #fff7e6 46%, #edd6a4 100%);
+      border: 1px solid rgba(183, 122, 18, .5);
+      box-shadow: 0 6px 12px rgba(91, 56, 6, .16), inset 0 1px 0 rgba(255,255,255,.85);
+    }
+
+    .angel-highlight-text {
+      margin: 0;
+      max-width: none;
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 21px;
+      line-height: 1.46;
+      font-weight: 600;
+      font-style: italic;
+      letter-spacing: -.01em;
+      text-wrap: balance;
+    }
+
+    .angel-highlight-text strong {
+      color: var(--gold);
+      font-weight: 800;
+      font-style: normal;
+    }
+
+    .text-input.input-invalid {
+      border-color: rgba(196, 42, 42, .85);
+      box-shadow:
+        0 0 0 3px rgba(196, 42, 42, .16),
+        inset 0 1px 0 rgba(255,255,255,.88),
+        0 9px 22px rgba(94, 60, 8, .08);
+      animation: shake-invalid .32s ease;
+    }
+
+    .field-error-msg {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      margin: 9px 2px 0;
+      color: #b3261e;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -.01em;
+    }
+
+    .field-error-msg.visible {
+      display: flex;
+    }
+
+    @keyframes shake-invalid {
+      0%, 100% { transform: translateX(0); }
+      20% { transform: translateX(-6px); }
+      40% { transform: translateX(5px); }
+      60% { transform: translateX(-4px); }
+      80% { transform: translateX(3px); }
+    }
+
     .cta,
     .option-btn {
       position: relative;
@@ -996,30 +1184,12 @@
 
     .final-vsl-frame {
       width: 100%;
-      max-width: 340px;
+      max-width: 400px;
       margin: 0 auto 20px;
-      aspect-ratio: 9 / 16;
       background: #000;
-      z-index: 0 !important;
-    }
-
-    .final-vsl-crop {
-      position: absolute;
-      inset: 0;
+      border-radius: 14px;
       overflow: hidden;
-      border-radius: inherit;
-      background: #000;
-    }
-
-    .final-vsl-crop iframe {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      border: none;
-      display: block;
-      transform: translate(-50%, -50%);
+      z-index: 0 !important;
     }
 
     [id="74a84da4-8be4-4fe1-8687-a2f6498c6def"] {
@@ -1038,27 +1208,27 @@
     }
 
     #step-2 .panel,
-    #step-3 .panel,
-    #step-4 .panel,
     #step-5 .panel,
-    #step-7 .panel {
+    #step-6 .panel,
+    #step-7 .panel,
+    #step-9 .panel {
       min-height: min(720px, calc(100svh - 36px));
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    #step-6 .panel,
-    #step-8 .panel {
+    #step-8 .panel,
+    #step-10 .panel {
       padding-top: 30px;
       padding-bottom: 32px;
     }
 
     #step-2 .form-wrap,
-    #step-3 .question-wrap,
-    #step-4 .question-wrap,
-    #step-5 .proof-wrap,
-    #step-7 .loading-wrap {
+    #step-5 .question-wrap,
+    #step-6 .question-wrap,
+    #step-7 .proof-wrap,
+    #step-9 .loading-wrap {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1076,7 +1246,7 @@
 
     /* =========================================================
        CARD DE PROTEÇÃO DE SAÍDA / BACKREDIRECT
-       Mantido isolado para não interferir no quiz, tracking, UTMs ou Panda.
+       Mantido isolado para não interferir no quiz, tracking, UTMs ou o player VTurb.
        ========================================================= */
     .final-exit-overlay {
       position: fixed;
@@ -1430,10 +1600,10 @@
       }
 
       #step-2 .panel,
-      #step-3 .panel,
-      #step-4 .panel,
       #step-5 .panel,
-      #step-7 .panel {
+      #step-6 .panel,
+      #step-7 .panel,
+      #step-9 .panel {
         min-height: calc(100svh - 24px);
       }
     }
@@ -2403,27 +2573,27 @@
       line-height: 1 !important;
     }
 
-    #step-3 .question-title,
-    #step-4 .question-title {
+    #step-5 .question-title,
+    #step-6 .question-title {
       letter-spacing: -0.02em !important;
     }
 
-    #step-3 .option-text,
-    #step-4 .option-text {
+    #step-5 .option-text,
+    #step-6 .option-text {
       letter-spacing: 0.005em !important;
     }
 
-    #step-7 .loading-title {
+    #step-9 .loading-title {
       max-width: 420px !important;
       margin-bottom: 12px !important;
     }
 
-    #step-7 .loading-name {
+    #step-9 .loading-name {
       max-width: 390px !important;
       margin-bottom: 14px !important;
     }
 
-    #step-7 .loading-copy {
+    #step-9 .loading-copy {
       max-width: 390px !important;
       font-size: 17.5px !important;
       line-height: 1.52 !important;
@@ -2458,34 +2628,34 @@
         transform: translateY(-1px) !important;
       }
 
-      #step-3 .question-title,
-      #step-4 .question-title {
+      #step-5 .question-title,
+      #step-6 .question-title {
         max-width: 365px !important;
         font-size: clamp(30px, 8.1vw, 35px) !important;
         line-height: 1.08 !important;
         letter-spacing: -0.018em !important;
       }
 
-      #step-3 .option-btn,
-      #step-4 .option-btn {
+      #step-5 .option-btn,
+      #step-6 .option-btn {
         min-height: 72px !important;
         padding: 14px 15px !important;
       }
 
-      #step-3 .option-text,
-      #step-4 .option-text {
+      #step-5 .option-text,
+      #step-6 .option-text {
         font-size: 16.4px !important;
         line-height: 1.34 !important;
         letter-spacing: 0.006em !important;
       }
 
-      #step-7 .loading-copy {
+      #step-9 .loading-copy {
         max-width: 350px !important;
         font-size: 16.2px !important;
         line-height: 1.5 !important;
       }
 
-      #step-7 .loading-name {
+      #step-9 .loading-name {
         max-width: 350px !important;
         font-size: 20px !important;
         line-height: 1.32 !important;
@@ -2511,13 +2681,13 @@
         font-size: 25px !important;
       }
 
-      #step-3 .question-title,
-      #step-4 .question-title {
+      #step-5 .question-title,
+      #step-6 .question-title {
         font-size: clamp(28px, 7.7vw, 31px) !important;
       }
 
-      #step-3 .option-text,
-      #step-4 .option-text {
+      #step-5 .option-text,
+      #step-6 .option-text {
         font-size: 15.7px !important;
       }
     }
@@ -2617,7 +2787,7 @@
        - seta próxima do texto e só ela se move
        - brilho reluzente do botão preservado
        ========================================================= */
-    #step-6 .cta {
+    #step-8 .cta {
       animation: none !important;
       transform: none !important;
       border-width: 2.4px !important;
@@ -2630,12 +2800,12 @@
         inset 0 -10px 16px rgba(0,0,0,.22) !important;
     }
 
-    #step-6 .cta:hover,
-    #step-6 .cta:focus-visible {
+    #step-8 .cta:hover,
+    #step-8 .cta:focus-visible {
       transform: none !important;
     }
 
-    #step-6 .cta .btn-content {
+    #step-8 .cta .btn-content {
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -2646,7 +2816,7 @@
       transform: none !important;
     }
 
-    #step-6 .cta .btn-content > span:first-child {
+    #step-8 .cta .btn-content > span:first-child {
       width: auto !important;
       flex: 0 1 auto !important;
       padding: 0 !important;
@@ -2657,7 +2827,7 @@
       transform: none !important;
     }
 
-    #step-6 .cta .btn-arrow {
+    #step-8 .cta .btn-arrow {
       position: relative !important;
       left: 0;
       top: -1px !important;
@@ -2683,23 +2853,23 @@
     }
 
     @media (max-width: 560px) {
-      #step-6 .cta .btn-content {
+      #step-8 .cta .btn-content {
         gap: 7px !important;
         padding: 0 14px !important;
       }
 
-      #step-6 .cta .btn-arrow {
+      #step-8 .cta .btn-arrow {
         font-size: 28px !important;
       }
     }
 
     @media (max-width: 390px) {
-      #step-6 .cta .btn-content {
+      #step-8 .cta .btn-content {
         gap: 6px !important;
         padding: 0 12px !important;
       }
 
-      #step-6 .cta .btn-arrow {
+      #step-8 .cta .btn-arrow {
         font-size: 25px !important;
       }
     }
@@ -2708,7 +2878,7 @@
     /* =========================================================
        PATCH FINAL V4 — pré-carregamento limpo e sem artefatos visíveis
        ========================================================= */
-    #step-7 .loading-title {
+    #step-9 .loading-title {
       max-width: 370px !important;
       margin: 0 auto 18px !important;
       font-size: clamp(30px, 6.8vw, 40px) !important;
@@ -2717,31 +2887,31 @@
       text-wrap: balance !important;
     }
 
-    #step-7 .loading-title strong {
+    #step-9 .loading-title strong {
       color: var(--gold) !important;
       font-weight: 800 !important;
     }
 
-    #step-7 .loading-copy {
+    #step-9 .loading-copy {
       max-width: 360px !important;
       margin-top: 0 !important;
       font-size: 16.8px !important;
       line-height: 1.48 !important;
     }
 
-    #step-7 .loading-name {
+    #step-9 .loading-name {
       display: none !important;
     }
 
     @media (max-width: 560px) {
-      #step-7 .loading-title {
+      #step-9 .loading-title {
         max-width: 330px !important;
         font-size: clamp(28px, 7.8vw, 34px) !important;
         line-height: 1.08 !important;
         margin-bottom: 16px !important;
       }
 
-      #step-7 .loading-copy {
+      #step-9 .loading-copy {
         max-width: 330px !important;
         font-size: 15.8px !important;
         line-height: 1.46 !important;
@@ -2749,7 +2919,7 @@
     }
 
     @media (max-width: 390px) {
-      #step-7 .loading-title {
+      #step-9 .loading-title {
         max-width: 300px !important;
         font-size: clamp(25px, 7.3vw, 30px) !important;
       }
@@ -3008,7 +3178,7 @@
   
 
     /* =========================================================
-       CTA HTML FINAL — backup independente do botão nativo da Panda
+       CTA HTML FINAL — aparece conforme o progresso do player VTurb
        Exibição pelo tempo real assistido da VSL: 04:32
        Layout verde, texto fixo em 1 linha e somente a seta animada
        ========================================================= */
@@ -3197,10 +3367,6 @@
   </style>
 </head>
 <body>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1950876905791862&ev=PageView&noscript=1"
-  /></noscript>
-
   <div class="bg-layer"></div>
   <div class="bg-vibrance"></div>
 
@@ -3210,7 +3376,7 @@
       <div class="step-inner">
         <div class="panel">
           <div class="topbar centered">
-            <div class="progress"><span style="width: 12%;"></span></div>
+            <div class="progress"><span style="width: 10%;"></span></div>
           </div>
 
           <div class="hero-badge">Mensagem urgente para você</div>
@@ -3223,7 +3389,7 @@
 
           <div class="hero-figure">
             <div class="image-card hero-image-card">
-              <img src="/imagem/2.png" alt="Arcanjo Miguel em destaque" />
+              <img src="/imagem/2.webp" alt="Arcanjo Miguel em destaque" />
             </div>
           </div>
 
@@ -3244,6 +3410,7 @@
                 </span>
                 <input class="text-input" id="user-name" data-user-name-input type="text" placeholder="Ex: Maria" autocomplete="given-name" />
               </div>
+              <p class="field-error-msg" id="user-name-error">Por favor, digite seu nome para continuar.</p>
             </div>
           </div>
 
@@ -3265,25 +3432,44 @@
       </div>
     </section>
 
-    <section class="step step-centered" id="step-2" data-step="2">
+    <section class="step step-top" id="step-2" data-step="2">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 24%;"></span></div>
+            <div class="progress"><span style="width: 20%;"></span></div>
           </div>
 
           <div class="form-wrap">
-            <div class="small-badge">Antes de continuar</div>
-            <h2 class="field-title">Antes de continuar, como você se chama?</h2>
+            <div class="small-badge">Seu anjo da guarda</div>
+            <h2 class="field-title">Antes de continuar, vamos descobrir qual é seu anjo da guarda.</h2>
             <p class="field-text"></p>
 
-            <div class="field-group">
-              <label class="field-label" for="user-name-step2">Digite seu primeiro nome</label>
-              <input class="text-input" id="user-name-step2" data-user-name-input type="text" placeholder="Ex: Maria" autocomplete="given-name" />
+            <div class="angel-image-wrap">
+              <div class="angel-image-card">
+                <img src="/imagem/anjo.webp" alt="Seu anjo da guarda" />
+              </div>
             </div>
 
-            <button class="cta" type="button" onclick="handleNameStep()">
+            <p class="below-image">
+              Para descobrir seu anjo, nos informe:
+            </p>
+
+            <div class="two-field-row">
+              <div class="field-group">
+                <label class="field-label" for="birth-year">Qual ano você nasceu?</label>
+                <input class="text-input" id="birth-year" type="text" inputmode="numeric" maxlength="4" placeholder="Ex: 1990" autocomplete="bday-year" />
+                <p class="field-error-msg" id="birth-year-error">Informe o ano do seu nascimento.</p>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="birth-day">Qual dia do seu nascimento?</label>
+                <input class="text-input" id="birth-day" type="text" inputmode="numeric" maxlength="2" placeholder="Ex: 24" autocomplete="bday-day" />
+                <p class="field-error-msg" id="birth-day-error">Informe o dia do seu nascimento.</p>
+              </div>
+            </div>
+
+            <button class="cta" type="button" onclick="handleAngelStep()">
               <span class="btn-content">
                 <span>CONTINUAR</span>
                 <span class="btn-arrow">→</span>
@@ -3294,37 +3480,33 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-3" data-step="3">
+    <section class="step step-centered" id="step-3" data-step="3">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 36%;"></span></div>
+            <div class="progress"><span style="width: 30%;"></span></div>
           </div>
 
-          <div class="question-wrap">
-            <div class="small-badge">Pergunta 1</div>
-            <h2 class="question-title">Em qual área você sente que sua vida está mais travada?</h2>
-            <p class="question-support"></p>
+          <div class="loading-wrap">
+            <div class="small-badge">Conectando com o céu</div>
 
-            <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_3_question', 3, 'resposta', 'Finanças travadas', 4)">
-                <span class="option-emoji">💸</span>
-                <span class="option-text">Finanças travadas</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_3_question', 3, 'resposta', 'Relacionamentos', 4)">
-                <span class="option-emoji">💔</span>
-                <span class="option-text">Relacionamentos</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_3_question', 3, 'resposta', 'Na área da saúde', 4)">
-                <span class="option-emoji">🙏</span>
-                <span class="option-text">Na área da saúde</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_3_question', 3, 'resposta', 'Proteção familiar', 4)">
-                <span class="option-emoji">🏠</span>
-                <span class="option-text">Proteção familiar</span>
-              </button>
+            <div class="circular-progress-wrap">
+              <svg class="circular-progress-svg" viewBox="0 0 120 120">
+                <defs>
+                  <linearGradient id="angel-progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8d5c06" />
+                    <stop offset="55%" stop-color="#c48716" />
+                    <stop offset="100%" stop-color="#efbf52" />
+                  </linearGradient>
+                </defs>
+                <circle class="circular-progress-track" cx="60" cy="60" r="52"></circle>
+                <circle class="circular-progress-fill" id="angel-loading-circle" cx="60" cy="60" r="52"></circle>
+              </svg>
+              <div class="circular-progress-percent" id="angel-loading-percent">0%</div>
             </div>
+
+            <h2 class="loading-title">Descobrindo qual Anjo da Guarda está protegendo você...</h2>
           </div>
         </div>
       </div>
@@ -3335,32 +3517,31 @@
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 48%;"></span></div>
+            <div class="progress"><span style="width: 40%;"></span></div>
           </div>
 
-          <div class="question-wrap">
-            <div class="small-badge">Pergunta 2</div>
-            <h2 class="question-title">E o que mais tem angustiado o seu coração?</h2>
-            <p class="question-support"></p>
+          <div class="proof-wrap">
+            <div class="small-badge">Seu anjo da guarda</div>
+            <h2 class="proof-title" id="angel-reveal-title">Incrível, seu anjo da guarda é São Miguel Arcanjo!</h2>
 
-            <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_4_question', 4, 'resposta', 'Parece que tudo continua bloqueado', 6)">
-                <span class="option-emoji">😔</span>
-                <span class="option-text">Parece que tudo continua bloqueado</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_4_question', 4, 'resposta', 'Perdi a paz e vivo com medo', 6)">
-                <span class="option-emoji">😣</span>
-                <span class="option-text">Perdi a paz e vivo com medo</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_4_question', 4, 'resposta', 'Já esperei demais e não aguento mais', 6)">
-                <span class="option-emoji">⏳</span>
-                <span class="option-text">Já esperei demais e não aguento mais</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_4_question', 4, 'resposta', 'Preciso de um sinal claro para continuar', 6)">
-                <span class="option-emoji">🕊️</span>
-                <span class="option-text">Preciso de um sinal claro para continuar</span>
-              </button>
+            <div class="angel-image-wrap">
+              <div class="angel-image-card">
+                <img src="/imagem/revelacao.webp" alt="São Miguel Arcanjo" />
+              </div>
             </div>
+
+            <div class="angel-highlight-box">
+              <p class="angel-highlight-text">
+                Líder do exército celestial, seu canto, o mais intenso, pode realizar milagres financeiros e de cura em menos de 24 horas.
+              </p>
+            </div>
+
+            <button class="cta" type="button" onclick="handleContinueButton(5, 'step_4_angel_reveal', 4)">
+              <span class="btn-content">
+                <span>CONTINUAR</span>
+                <span class="btn-arrow">→</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -3371,7 +3552,79 @@
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 50%;"></span></div>
+          </div>
+
+          <div class="question-wrap">
+            <div class="small-badge">Pergunta 1</div>
+            <h2 class="question-title">Em qual área você sente que sua vida está mais travada?</h2>
+            <p class="question-support"></p>
+
+            <div class="options-wrap">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Finanças travadas', 6)">
+                <span class="option-emoji">💸</span>
+                <span class="option-text">Finanças travadas</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Relacionamentos', 6)">
+                <span class="option-emoji">💔</span>
+                <span class="option-text">Relacionamentos</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Na área da saúde', 6)">
+                <span class="option-emoji">🙏</span>
+                <span class="option-text">Na área da saúde</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Proteção familiar', 6)">
+                <span class="option-emoji">🏠</span>
+                <span class="option-text">Proteção familiar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-6" data-step="6">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
             <div class="progress"><span style="width: 60%;"></span></div>
+          </div>
+
+          <div class="question-wrap">
+            <div class="small-badge">Pergunta 2</div>
+            <h2 class="question-title">E o que mais tem angustiado o seu coração?</h2>
+            <p class="question-support"></p>
+
+            <div class="options-wrap">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Parece que tudo continua bloqueado', 8)">
+                <span class="option-emoji">😔</span>
+                <span class="option-text">Parece que tudo continua bloqueado</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Perdi a paz e vivo com medo', 8)">
+                <span class="option-emoji">😣</span>
+                <span class="option-text">Perdi a paz e vivo com medo</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Já esperei demais e não aguento mais', 8)">
+                <span class="option-emoji">⏳</span>
+                <span class="option-text">Já esperei demais e não aguento mais</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Preciso de um sinal claro para continuar', 8)">
+                <span class="option-emoji">🕊️</span>
+                <span class="option-text">Preciso de um sinal claro para continuar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-7" data-step="7">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 70%;"></span></div>
           </div>
 
           <div class="proof-wrap">
@@ -3394,7 +3647,7 @@
               Veja o que aconteceu com pessoas que decidiram acreditar e seguir até o final.
             </p>
 
-            <button class="cta" type="button" onclick="handleContinueButton(6, 'step_5_proof', 5)">
+            <button class="cta" type="button" onclick="handleContinueButton(8, 'step_7_proof', 7)">
               <span class="btn-content">
                 <span>QUERO CONTINUAR</span>
                 <span class="btn-arrow">→</span>
@@ -3405,12 +3658,12 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-6" data-step="6">
+    <section class="step step-top" id="step-8" data-step="8">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 74%;"></span></div>
+            <div class="progress"><span style="width: 80%;"></span></div>
           </div>
 
           <div class="proof-wrap">
@@ -3440,7 +3693,7 @@
               </div>
             </div>
 
-            <button class="cta" type="button" onclick="handleContinueButton(7, 'step_6_social_prints', 6)">
+            <button class="cta" type="button" onclick="handleContinueButton(9, 'step_8_social_prints', 8)">
               <span class="btn-content">
                 <span>PROSSEGUIR</span>
                 <span class="btn-arrow">→</span>
@@ -3451,12 +3704,12 @@
       </div>
     </section>
 
-    <section class="step step-centered" id="step-7" data-step="7">
+    <section class="step step-centered" id="step-9" data-step="9">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 88%;"></span></div>
+            <div class="progress"><span style="width: 90%;"></span></div>
           </div>
 
           <div class="loading-wrap">
@@ -3473,7 +3726,7 @@
             </h2>
 
             <div class="loading-image-wrap">
-              <img src="/imagem/9.png" alt="Imagem de carregamento">
+              <img src="/imagem/9.webp" alt="Imagem de carregamento">
             </div>
 
             <p class="loading-copy" id="loading-copy-text">
@@ -3484,7 +3737,7 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-8" data-step="8">
+    <section class="step step-top" id="step-10" data-step="10">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar centered">
@@ -3496,19 +3749,9 @@
             <h2 class="final-title">Agora ouça com atenção: essa mensagem é para você</h2>
 
             <div class="final-vsl-frame">
-              <div class="final-vsl-crop">
-                <iframe
-                  id="panda-97ae7e09-6090-4d9e-b57f-1157796f2f09"
-                  data-src="https://player-vz-1b3c04ac-339.tv.pandavideo.com.br/embed/?v=97ae7e09-6090-4d9e-b57f-1157796f2f09"
-                  src="about:blank"
-                  style="border:none;"
-                  allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
-                  allowfullscreen="true"
-                  width="720"
-                  height="360"
-                  fetchpriority="high">
-                </iframe>
-              </div>
+              <vturb-smartplayer id="vid-6a443bebc2ae486b8a8442df" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+                <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div>
+              </vturb-smartplayer>
             </div>
 
             <div id="74a84da4-8be4-4fe1-8687-a2f6498c6def" class="final-html-cta-wrap">
@@ -3520,7 +3763,7 @@
                 rel="noopener noreferrer"
                 aria-hidden="true">
                 <span class="final-html-cta-content">
-                  <span>Conrtribuir com R$ 47</span>
+                  <span>Acessar Minha Oração contribuindo com apenas $9.90</span>
                   <span class="final-html-cta-arrow">→</span>
                 </span>
               </a>
@@ -3594,30 +3837,34 @@
 
     const STEP_KEY = 'quiz_current_step';
     const PARAMS_KEY = 'quiz_persisted_params';
-    const FINAL_PANDA_ID = 'panda-97ae7e09-6090-4d9e-b57f-1157796f2f09';
-    const FINAL_STEP = 8;
-    const LOADING_STEP = 7;
+    const FINAL_VTURB_PLAYER_ID = 'vid-6a443bebc2ae486b8a8442df';
+    const FINAL_VTURB_SCRIPT_SRC = 'https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a443bebc2ae486b8a8442df/v4/player.js';
+    const FINAL_STEP = 10;
+    const LOADING_STEP = 9;
+    const ANGEL_LOADING_STEP = 3;
+    const ANGEL_LOADING_DURATION = 5000;
+    const ANGEL_CIRCLE_CIRCUMFERENCE = 2 * Math.PI * 52;
     const BACK_REDIRECT_URL = 'back.html';
-    const FINAL_HTML_CTA_SECONDS = 272; // 04:32
+    const FINAL_HTML_CTA_SECONDS = 517; // 08:37
     const FINAL_CHECKOUT_URL = 'https://go.perfectpay.com.br/PPU38CQAUAA';
 
     let loadingStarted = false;
     let loadingTimer = null;
-    let pandaCtaObserver = null;
-    let pandaCtaRetryTimer = null;
     let finalExitModalOpen = false;
     let finalExitBypass = false;
-    let finalVslReloadToken = 0;
+    let finalVturbHooked = false;
 
     const STEP_TRACK_NAMES = {
       1: 'step_1_intro',
-      2: 'step_2_name',
-      3: 'step_3_question',
-      4: 'step_4_question',
-      5: 'step_5_proof',
-      6: 'step_6_social_prints',
-      7: 'step_7_loading',
-      8: 'step_8_final_vsl'
+      2: 'step_2_angel_birth',
+      3: 'step_3_angel_loading',
+      4: 'step_4_angel_reveal',
+      5: 'step_5_question',
+      6: 'step_6_question',
+      7: 'step_7_proof',
+      8: 'step_8_social_prints',
+      9: 'step_9_loading',
+      10: 'step_10_final_vsl'
     };
 
     const carousels = {
@@ -3630,7 +3877,7 @@
       bottom: {
         index: 0,
         animating: false,
-        images: ['/imagem/5.webp', '/imagem/6.webp', '/imagem/7.webp', '/imagem/8.png'],
+        images: ['/imagem/5.webp', '/imagem/6.webp', '/imagem/7.webp', '/imagem/8.webp'],
         alts: ['Outro relato 1', 'Outro relato 2', 'Outro relato 3', 'Outro relato 4']
       }
     };
@@ -3798,6 +4045,19 @@
       copyEl.innerHTML = `<strong>Falta pouco.</strong> A orientação final está sendo preparada para aparecer na próxima etapa.`;
     }
 
+    function updateAngelRevealCopy() {
+      const titleEl = document.getElementById('angel-reveal-title');
+      if (!titleEl) return;
+
+      const firstName = getUserFirstName();
+
+      if (firstName) {
+        titleEl.innerHTML = `Incrível, <span class="gold-name">${firstName}</span>! Seu anjo da guarda é São Miguel Arcanjo!`;
+      } else {
+        titleEl.innerHTML = `Incrível! Seu anjo da guarda é São Miguel Arcanjo!`;
+      }
+    }
+
     function appendPersistedParamsToUrl(url) {
       try {
         const persistedParams = getPersistedParams();
@@ -3831,128 +4091,31 @@
     }
 
     // ========================================================================
-    // REIDRATAÇÃO DO BOTÃO CTA DA PANDA NA VSL FINAL DO WHITE
+    // VSL FINAL — PLAYER VTURB
     // ========================================================================
-    // Mantém a mesma lógica robusta do HTML original: quando a Panda renderiza o
-    // botão dentro do iframe, tentamos substituir a função redirect() para abrir
-    // o checkout já com os parâmetros persistidos. Também há um listener de click
-    // como rede de segurança.
+    // Carrega o script do player VTurb (uma única vez) e expõe o CTA em HTML
+    // que aparece depois de FINAL_HTML_CTA_SECONDS de vídeo assistido.
     // ========================================================================
-
-    function rehydrateIframeButton() {
-      const container = document.getElementById('74a84da4-8be4-4fe1-8687-a2f6498c6def');
-      if (!container) return false;
-      const iframe = container.querySelector('iframe');
-      if (!iframe) return false;
-
-      let doc, win;
-      try {
-        doc = iframe.contentDocument;
-        win = iframe.contentWindow;
-      } catch (e) { return false; }
-
-      if (!doc || !doc.body || !win) return false;
-
-      if (!doc.__qtpClickHooked) {
-        doc.addEventListener('click', function (ev) {
-          const btn = ev.target.closest && ev.target.closest('button.buttonConfig, button');
-          if (!btn) return;
-          if (win.redirect && win.redirect.__qtpPatched) return;
-
-          ev.preventDefault();
-          ev.stopPropagation();
-          try {
-            const src = (win.redirect && win.redirect.toString()) || '';
-            const m = src.match(/https?:\/\/[^\s'"<>()]+/);
-            if (m) {
-              try { safeTrackCtaClick('step_8_final_vsl', 8); } catch (e) {}
-              win.open(appendPersistedParamsToUrl(m[0]), '_blank');
-            }
-          } catch (e) {}
-        }, true);
-        doc.__qtpClickHooked = true;
-      }
-
-      if (typeof win.redirect === 'function' && !win.redirect.__qtpPatched) {
-        const original = win.redirect;
-        const src = original.toString();
-        const match = src.match(/https?:\/\/[^\s'"<>()]+/);
-
-        if (match) {
-          const originalUrl = match[0];
-          const patched = function () {
-            try {
-              const finalUrl = appendPersistedParamsToUrl(originalUrl);
-              try { safeTrackCtaClick('step_8_final_vsl', 8); } catch (e) {}
-              win.open(finalUrl, '_blank');
-              return;
-            } catch (e) {
-              return original.apply(this, arguments);
-            }
-          };
-          patched.__qtpPatched = true;
-          win.redirect = patched;
-          return true;
-        }
-      }
-
-      return !!(win.redirect && win.redirect.__qtpPatched);
-    }
-
-    function watchAndRehydratePandaCta() {
-      const container = document.getElementById('74a84da4-8be4-4fe1-8687-a2f6498c6def');
-      if (!container) return;
-
-      if (pandaCtaObserver) { try { pandaCtaObserver.disconnect(); } catch (e) {} }
-
-      pandaCtaObserver = new MutationObserver(() => tryHookIframe());
-      pandaCtaObserver.observe(container, { childList: true, subtree: true });
-
-      tryHookIframe();
-
-      if (pandaCtaRetryTimer) clearInterval(pandaCtaRetryTimer);
-      pandaCtaRetryTimer = setInterval(() => {
-        if (rehydrateIframeButton()) {
-          clearInterval(pandaCtaRetryTimer);
-          pandaCtaRetryTimer = null;
-        }
-      }, 500);
-    }
-
-    function tryHookIframe() {
-      const container = document.getElementById('74a84da4-8be4-4fe1-8687-a2f6498c6def');
-      if (!container) return;
-      const iframe = container.querySelector('iframe');
-      if (!iframe) return;
-
-      if (rehydrateIframeButton()) return;
-      iframe.addEventListener('load', rehydrateIframeButton, { once: true });
-    }
-
-    function applyParamsToPandaCtaLinks() {
-      return rehydrateIframeButton();
-    }
 
     function ensureFinalVslLoaded(forceReload = false) {
-      const iframe = document.getElementById(FINAL_PANDA_ID);
-      if (!iframe) return false;
-
-      const rawBase = iframe.getAttribute('data-src') || iframe.dataset.src || '';
-      if (!rawBase) return false;
-
-      const finalSrc = appendPersistedParamsToUrl(rawBase);
-      const currentSrc = iframe.getAttribute('src') || '';
-
-      if (
-        forceReload ||
-        !currentSrc ||
-        currentSrc === 'about:blank' ||
-        currentSrc.indexOf('about:blank') > -1
-      ) {
-        try { iframe.src = finalSrc; } catch (e) {}
+      if (forceReload) {
+        try {
+          const oldScript = document.querySelector('script[src="' + FINAL_VTURB_SCRIPT_SRC + '"]');
+          if (oldScript) oldScript.remove();
+        } catch (e) {}
       }
 
-      return !!(iframe.src && iframe.src !== 'about:blank');
+      if (!document.querySelector('script[src="' + FINAL_VTURB_SCRIPT_SRC + '"]')) {
+        try {
+          const s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.src = FINAL_VTURB_SCRIPT_SRC;
+          s.async = true;
+          document.head.appendChild(s);
+        } catch (e) {}
+      }
+
+      return true;
     }
 
     function loadMediaForStep(stepNumber) {
@@ -3992,15 +4155,6 @@
         if (finalHtmlCta) {
           finalHtmlCta.classList.remove('is-visible');
           finalHtmlCta.setAttribute('aria-hidden', 'true');
-        }
-
-        if (pandaCtaRetryTimer) {
-          clearInterval(pandaCtaRetryTimer);
-          pandaCtaRetryTimer = null;
-        }
-        if (pandaCtaObserver) {
-          try { pandaCtaObserver.disconnect(); } catch (e) {}
-          pandaCtaObserver = null;
         }
       }
     }
@@ -4051,10 +4205,10 @@
     function continueFinalVideo() {
       hideFinalExitModal();
 
-      // Correção definitiva para a tela preta da Panda após o botão voltar do navegador:
-      // em vez de reaproveitar o iframe/player que ficou em estado quebrado, recarrega a
-      // própria página já travada na etapa 8. Assim o Panda nasce limpo, com src real e
-      // com todos os parâmetros persistidos preservados.
+      // Correção definitiva para evitar estado quebrado do player após o botão voltar:
+      // em vez de reaproveitar o player que ficou em estado inconsistente, recarrega a
+      // própria página já travada na etapa final. Assim o VTurb nasce limpo, com o
+      // script carregado do zero e com todos os parâmetros persistidos preservados.
       currentStep = FINAL_STEP;
       setCurrentStepStorage(FINAL_STEP);
 
@@ -4150,7 +4304,7 @@
         cta.target = '_blank';
         cta.rel = 'noopener noreferrer';
         cta.setAttribute('aria-hidden', 'true');
-        cta.innerHTML = '<span class="final-html-cta-content"><span>Acessar a Oração contribuindo com R$ 47</span><span class="final-html-cta-arrow">→</span></span>';
+        cta.innerHTML = '<span class="final-html-cta-content"><span>Acessar Minha Oração contribuindo com apenas $9.90</span><span class="final-html-cta-arrow">→</span></span>';
         container.appendChild(cta);
       }
 
@@ -4166,102 +4320,107 @@
       cta.setAttribute('aria-hidden', visible ? 'false' : 'true');
     }
 
-    function initFinalPandaCTA() {
+    function initFinalVturbCTA() {
       const targetStep = document.getElementById('step-' + FINAL_STEP);
-      const iframe = document.getElementById(FINAL_PANDA_ID);
       const cta = getFinalHtmlCta();
 
-      if (!targetStep || !iframe || !cta) return;
+      if (!targetStep || !cta) return;
       if (!targetStep.classList.contains('active')) return;
 
-      const initToken = finalVslReloadToken;
       ensureFinalVslLoaded(false);
       setFinalHtmlCtaVisible(false);
 
       if (!cta.__finalHtmlCtaClickHooked) {
         cta.addEventListener('click', function (ev) {
-          try { safeTrackCtaClick('step_8_final_vsl', 8); } catch (e) {}
+          try { safeTrackCtaClick('step_10_final_vsl', 10); } catch (e) {}
           try { cta.href = appendPersistedParamsToUrl(FINAL_CHECKOUT_URL); } catch (e) {}
         });
         cta.__finalHtmlCtaClickHooked = true;
       }
 
-      let initStarted = false;
+      if (finalVturbHooked) return;
 
-      const runInit = () => {
-        if (initStarted) return;
-        if (initToken !== finalVslReloadToken) return;
+      let attempts = 0;
+
+      const tryHookPlayer = () => {
+        if (finalVturbHooked) return;
         if (!targetStep.classList.contains('active')) return;
 
-        ensureFinalVslLoaded(false);
-        if (!iframe.src || iframe.src === 'about:blank') return;
-
-        initStarted = true;
-
-        const startPanda = () => {
-          window.pandascripttag = window.pandascripttag || [];
-          window.pandascripttag.push(function () {
-            try {
-              if (window.__finalPandaInstance && window.__finalPandaInstance.destroy) {
-                try { window.__finalPandaInstance.destroy(); } catch (e) {}
-              }
-
-              const pandaInstance = new PandaPlayer(FINAL_PANDA_ID, {
-                onReady() {
-                  if (typeof pandaInstance.setParentWindowUrl === 'function') {
-                    try { pandaInstance.setParentWindowUrl(); } catch (e) {}
-                  }
-
-                  try {
-                    pandaInstance.onEvent(function (e) {
-                      if (!e || e.message !== 'panda_timeupdate') return;
-                      if (e.isMutedIndicator) return;
-
-                      const currentTime = Number(e.currentTime || 0);
-                      const shouldShow = currentTime >= FINAL_HTML_CTA_SECONDS;
-                      setFinalHtmlCtaVisible(shouldShow);
-                    });
-                  } catch (e) {}
-                }
-              });
-
-              window.__finalPandaInstance = pandaInstance;
-            } catch (e) {
-              initStarted = false;
-            }
-          });
-        };
-
-        if (!document.querySelector('script[src^="https://player.pandavideo.com.br/api.v2.js"]')) {
-          let s = document.createElement('script');
-          s.src = 'https://player.pandavideo.com.br/api.v2.js';
-          s.async = true;
-          s.onload = startPanda;
-          document.head.appendChild(s);
-        } else {
-          startPanda();
+        if (typeof window.smartplayer === 'undefined' || !(window.smartplayer.instances && window.smartplayer.instances.length)) {
+          attempts += 1;
+          if (attempts >= 20) return;
+          setTimeout(tryHookPlayer, 500);
+          return;
         }
+
+        const instance = window.smartplayer.instances[0];
+        if (!instance || typeof instance.on !== 'function') {
+          attempts += 1;
+          if (attempts >= 20) return;
+          setTimeout(tryHookPlayer, 500);
+          return;
+        }
+
+        finalVturbHooked = true;
+        window.__finalVturbInstance = instance;
+
+        instance.on('timeupdate', function () {
+          const currentTime = (instance.video && instance.video.currentTime) || 0;
+          setFinalHtmlCtaVisible(currentTime >= FINAL_HTML_CTA_SECONDS);
+        });
       };
 
-      iframe.addEventListener('load', function () {
-        setTimeout(runInit, 180);
-      }, { once: true });
+      setTimeout(tryHookPlayer, 600);
+    }
 
-      setTimeout(runInit, 900);
+    let angelLoadingFrame = null;
+    let angelLoadingStart = 0;
 
-      setTimeout(() => {
-        if (initToken !== finalVslReloadToken) return;
-        if (!targetStep.classList.contains('active')) return;
+    function resetAngelLoadingState() {
+      if (angelLoadingFrame) {
+        cancelAnimationFrame(angelLoadingFrame);
+        angelLoadingFrame = null;
+      }
+      const circle = document.getElementById('angel-loading-circle');
+      const percentEl = document.getElementById('angel-loading-percent');
+      if (circle) circle.style.strokeDashoffset = String(ANGEL_CIRCLE_CIRCUMFERENCE);
+      if (percentEl) percentEl.textContent = '0%';
+    }
 
-        if (!iframe.src || iframe.src === 'about:blank' || iframe.src.indexOf('about:blank') > -1) {
-          ensureFinalVslLoaded(true);
-          iframe.addEventListener('load', function () {
-            setTimeout(runInit, 180);
-          }, { once: true });
-        } else if (!initStarted) {
-          runInit();
+    function startAngelLoading() {
+      resetAngelLoadingState();
+      const circle = document.getElementById('angel-loading-circle');
+      const percentEl = document.getElementById('angel-loading-percent');
+      if (!circle || !percentEl) return;
+
+      angelLoadingStart = Date.now();
+
+      function tick() {
+        if (currentStep !== ANGEL_LOADING_STEP) {
+          angelLoadingFrame = null;
+          return;
         }
-      }, 2500);
+
+        const elapsed = Date.now() - angelLoadingStart;
+        const progress = Math.min(elapsed / ANGEL_LOADING_DURATION, 1);
+        const offset = ANGEL_CIRCLE_CIRCUMFERENCE * (1 - progress);
+
+        circle.style.strokeDashoffset = String(offset);
+        percentEl.textContent = Math.round(progress * 100) + '%';
+
+        if (progress < 1) {
+          angelLoadingFrame = requestAnimationFrame(tick);
+        } else {
+          angelLoadingFrame = null;
+          setTimeout(function () {
+            if (currentStep === ANGEL_LOADING_STEP) {
+              goToStep(ANGEL_LOADING_STEP + 1);
+            }
+          }, 200);
+        }
+      }
+
+      angelLoadingFrame = requestAnimationFrame(tick);
     }
 
     function renderStep(stepNumber) {
@@ -4279,6 +4438,15 @@
 
       window.scrollTo(0, 0);
 
+      if (stepNumber === ANGEL_LOADING_STEP) {
+        resetAngelLoadingState();
+        setTimeout(startAngelLoading, 120);
+      }
+
+      if (stepNumber === ANGEL_LOADING_STEP + 1) {
+        updateAngelRevealCopy();
+      }
+
       if (stepNumber === LOADING_STEP) {
         resetLoadingState();
         setTimeout(startLoadingStep, 120);
@@ -4286,7 +4454,7 @@
 
       if (stepNumber === FINAL_STEP) {
         ensureFinalVslLoaded(false);
-        setTimeout(initFinalPandaCTA, 350);
+        setTimeout(initFinalVturbCTA, 350);
       } else {
         hideFinalExitModal();
       }
@@ -4321,7 +4489,7 @@
     function prevStep() {
       if (currentStep <= 1) return;
 
-      const previousStep = currentStep === 3 ? 1 : (currentStep === 6 ? 4 : currentStep - 1);
+      const previousStep = currentStep === 4 ? 2 : (currentStep === 8 ? 6 : currentStep - 1);
       renderStep(previousStep);
       history.pushState({ quizStep: previousStep }, '', buildStepUrl(previousStep));
     }
@@ -4331,15 +4499,60 @@
       goToStep(nextStep);
     }
 
-    function handleNameStep() {
-      const input =
-        document.querySelector('.step.active [data-user-name-input]') ||
-        document.getElementById('user-name') ||
-        document.querySelector('[data-user-name-input]');
-      const name = input ? input.value.trim() : '';
+    function showNameFieldError(input, errorId) {
+      if (input) {
+        input.classList.remove('input-invalid');
+        // força reflow pra reiniciar a animação de shake se já estava marcado
+        void input.offsetWidth;
+        input.classList.add('input-invalid');
+        input.focus();
+      }
+      const errorEl = document.getElementById(errorId);
+      if (errorEl) errorEl.classList.add('visible');
+    }
 
-      persistUserFirstName(name);
-      safeTrackField('step_2_name', 2, 'name', name);
+    function clearNameFieldError(input, errorId) {
+      if (input) input.classList.remove('input-invalid');
+      const errorEl = document.getElementById(errorId);
+      if (errorEl) errorEl.classList.remove('visible');
+    }
+
+    function persistBirthInfo(year, day) {
+      try { sessionStorage.setItem('quiz_birth_year', year); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_year', year); } catch (e) {}
+      try { sessionStorage.setItem('quiz_birth_day', day); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_day', day); } catch (e) {}
+    }
+
+    function handleAngelStep() {
+      const yearInput = document.getElementById('birth-year');
+      const dayInput = document.getElementById('birth-day');
+      const year = yearInput ? yearInput.value.trim() : '';
+      const day = dayInput ? dayInput.value.trim() : '';
+
+      const yearValid = /^\d{4}$/.test(year);
+      const dayValid = /^\d{1,2}$/.test(day) && Number(day) >= 1 && Number(day) <= 31;
+
+      let hasError = false;
+      if (!yearValid) {
+        showNameFieldError(yearInput, 'birth-year-error');
+        hasError = true;
+      } else {
+        clearNameFieldError(yearInput, 'birth-year-error');
+      }
+
+      if (!dayValid) {
+        showNameFieldError(dayInput, 'birth-day-error');
+        hasError = true;
+      } else {
+        clearNameFieldError(dayInput, 'birth-day-error');
+      }
+
+      if (hasError) return;
+
+      persistBirthInfo(year, day);
+      safeTrackField('step_2_angel_birth', 2, 'birth_year', year);
+      safeTrackField('step_2_angel_birth', 2, 'birth_day', day);
       safeTrackStepAdvance(2);
       goToStep(3);
     }
@@ -4348,11 +4561,16 @@
       const input = document.getElementById('user-name');
       const name = input ? input.value.trim() : '';
 
+      if (!name) {
+        showNameFieldError(input, 'user-name-error');
+        return;
+      }
+      clearNameFieldError(input, 'user-name-error');
+
       persistUserFirstName(name);
-      safeTrackField('step_2_name', 2, 'name', name);
+      safeTrackField('step_1_intro', 1, 'name', name);
       safeTrackStepAdvance(1);
-      safeTrackStepAdvance(2);
-      goToStep(3);
+      goToStep(2);
     }
 
     function handleOptionStep(stepName, stepOrder, fieldName, fieldValue, nextStep) {
@@ -4451,6 +4669,14 @@
         persistIncomingParams();
         syncUrlWithPersistedParams(currentStep, true);
       }
+    });
+
+    ['user-name', 'birth-year', 'birth-day'].forEach(function (inputId) {
+      const el = document.getElementById(inputId);
+      if (!el) return;
+      el.addEventListener('input', function () {
+        clearNameFieldError(el, inputId + '-error');
+      });
     });
 
     initHistory();
