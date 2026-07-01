@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
-  <title>Quiz Espiritual - White</title>
+  <title>Cuestionario Espiritual - White</title>
 
   <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
   <link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a443bebc2ae486b8a8442df/v4/player.js" as="script">
@@ -3217,12 +3217,12 @@
       font-size: 15.2px;
       font-weight: 900;
       letter-spacing: .004em;
-      line-height: 1;
+      line-height: 1.28;
       text-align: center;
       text-transform: none;
       animation: finalHtmlCtaPulse 1.75s ease-in-out infinite;
       touch-action: manipulation;
-      white-space: nowrap;
+      padding: 14px 12px;
     }
 
     .final-html-cta.is-visible {
@@ -3262,20 +3262,22 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      padding: 0 17px;
+      gap: 8px;
+      padding: 0 6px;
       overflow: visible;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     .final-html-cta-content > span:first-child {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
+      flex: 1 1 auto;
+      min-width: 0;
+      text-align: center;
       text-shadow: 0 1px 0 rgba(0,0,0,.32);
-      white-space: nowrap;
+      white-space: normal;
+      text-wrap: balance;
+      overflow-wrap: break-word;
       overflow: visible;
-      text-overflow: clip;
       animation: none !important;
       transform: none !important;
     }
@@ -3325,21 +3327,23 @@
       .final-html-cta-wrap {
         width: min(100%, 384px) !important;
         max-width: 384px !important;
+        min-height: 64px !important;
       }
 
       .final-html-cta {
         min-height: 64px;
         font-size: clamp(11.2px, 3.08vw, 13.7px);
         border-radius: 14px;
+        padding: 12px 10px;
       }
 
       .final-html-cta-content {
-        gap: 7px;
-        padding: 0 12px;
+        gap: 6px;
+        padding: 0 4px;
       }
 
       .final-html-cta-arrow {
-        font-size: 28px;
+        font-size: 26px;
       }
     }
 
@@ -3347,20 +3351,22 @@
       .final-html-cta-wrap {
         width: min(100%, 360px) !important;
         max-width: 360px !important;
+        min-height: 60px !important;
       }
 
       .final-html-cta {
-        min-height: 62px;
+        min-height: 60px;
         font-size: clamp(10px, 2.92vw, 11.4px);
+        padding: 10px 8px;
       }
 
       .final-html-cta-content {
-        gap: 6px;
-        padding: 0 9px;
+        gap: 5px;
+        padding: 0 3px;
       }
 
       .final-html-cta-arrow {
-        font-size: 25px;
+        font-size: 23px;
       }
     }
 
@@ -3379,27 +3385,27 @@
             <div class="progress"><span style="width: 10%;"></span></div>
           </div>
 
-          <div class="hero-badge">Mensagem urgente para você</div>
+          <div class="hero-badge">Mensaje urgente para ti</div>
           <h1 class="hero-title">
-            <span class="headline-line">Uma oração poderosa</span>
-            <span class="headline-line">que vai destravar tudo que</span>
-            <span class="headline-line">você vem pedindo em <span class="gold-word">silêncio.</span></span>
+            <span class="headline-line">Una oración poderosa</span>
+            <span class="headline-line">que va a destrabar todo lo que</span>
+            <span class="headline-line">has estado pidiendo en <span class="gold-word">silencio.</span></span>
           </h1>
           <div class="divider-soft"></div>
 
           <div class="hero-figure">
             <div class="image-card hero-image-card">
-              <img src="/imagem/2.webp" alt="Arcanjo Miguel em destaque" />
+              <img src="/imagem/2.webp" alt="Arcángel Miguel en primer plano" />
             </div>
           </div>
 
           <p class="below-image">
-            Digite seu nome e responda com sinceridade. 
+            Escribe tu nombre y responde con sinceridad. 
           </p>
 
           <div class="form-wrap">
             <div class="field-group">
-              <label class="field-label" for="user-name">Seu primeiro nome</label>
+              <label class="field-label" for="user-name">Tu primer nombre</label>
               <div class="input-shell">
                 <span class="input-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
@@ -3408,22 +3414,22 @@
                     <circle cx="12" cy="12" r="10"></circle>
                   </svg>
                 </span>
-                <input class="text-input" id="user-name" data-user-name-input type="text" placeholder="Ex: Maria" autocomplete="given-name" />
+                <input class="text-input" id="user-name" data-user-name-input type="text" placeholder="Ej: María" autocomplete="given-name" />
               </div>
-              <p class="field-error-msg" id="user-name-error">Por favor, digite seu nome para continuar.</p>
+              <p class="field-error-msg" id="user-name-error">Por favor, escribe tu nombre para continuar.</p>
             </div>
           </div>
 
           <button class="cta" type="button" onclick="handleHeroNameStep()">
             <span class="btn-content">
-              <span>QUERO RECEBER ESSA ORAÇÃO</span>
+              <span>QUIERO RECIBIR ESTA ORACIÓN</span>
               <span class="btn-arrow">→</span>
             </span>
           </button>
 
           <p class="note">
-            <strong>Você não chegou aqui por acaso.</strong>
-            Continue para liberar sua mensagem.
+            <strong>No llegaste aquí por casualidad.</strong>
+            Continúa para liberar tu mensaje.
           </p>
 
           <span class="corner-leaf corner-leaf-left" aria-hidden="true"></span>
@@ -3441,31 +3447,31 @@
           </div>
 
           <div class="form-wrap">
-            <div class="small-badge">Seu anjo da guarda</div>
-            <h2 class="field-title">Antes de continuar, vamos descobrir qual é seu anjo da guarda.</h2>
+            <div class="small-badge">Tu ángel de la guarda</div>
+            <h2 class="field-title">Antes de continuar, vamos a descubrir cuál es tu ángel de la guarda.</h2>
             <p class="field-text"></p>
 
             <div class="angel-image-wrap">
               <div class="angel-image-card">
-                <img src="/imagem/anjo.webp" alt="Seu anjo da guarda" />
+                <img src="/imagem/anjo.webp" alt="Tu ángel de la guarda" />
               </div>
             </div>
 
             <p class="below-image">
-              Para descobrir seu anjo, nos informe:
+              Para descubrir tu ángel, indícanos:
             </p>
 
             <div class="two-field-row">
               <div class="field-group">
-                <label class="field-label" for="birth-year">Qual ano você nasceu?</label>
-                <input class="text-input" id="birth-year" type="text" inputmode="numeric" maxlength="4" placeholder="Ex: 1990" autocomplete="bday-year" />
-                <p class="field-error-msg" id="birth-year-error">Informe o ano do seu nascimento.</p>
+                <label class="field-label" for="birth-year">¿En qué año naciste?</label>
+                <input class="text-input" id="birth-year" type="text" inputmode="numeric" maxlength="4" placeholder="Ej: 1990" autocomplete="bday-year" />
+                <p class="field-error-msg" id="birth-year-error">Indica el año de tu nacimiento.</p>
               </div>
 
               <div class="field-group">
-                <label class="field-label" for="birth-day">Qual dia do seu nascimento?</label>
-                <input class="text-input" id="birth-day" type="text" inputmode="numeric" maxlength="2" placeholder="Ex: 24" autocomplete="bday-day" />
-                <p class="field-error-msg" id="birth-day-error">Informe o dia do seu nascimento.</p>
+                <label class="field-label" for="birth-day">¿Qué día naciste?</label>
+                <input class="text-input" id="birth-day" type="text" inputmode="numeric" maxlength="2" placeholder="Ej: 24" autocomplete="bday-day" />
+                <p class="field-error-msg" id="birth-day-error">Indica el día de tu nacimiento.</p>
               </div>
             </div>
 
@@ -3489,7 +3495,7 @@
           </div>
 
           <div class="loading-wrap">
-            <div class="small-badge">Conectando com o céu</div>
+            <div class="small-badge">Conectando con el cielo</div>
 
             <div class="circular-progress-wrap">
               <svg class="circular-progress-svg" viewBox="0 0 120 120">
@@ -3506,7 +3512,7 @@
               <div class="circular-progress-percent" id="angel-loading-percent">0%</div>
             </div>
 
-            <h2 class="loading-title">Descobrindo qual Anjo da Guarda está protegendo você...</h2>
+            <h2 class="loading-title">Descubriendo qué Ángel de la Guarda te está protegiendo...</h2>
           </div>
         </div>
       </div>
@@ -3521,18 +3527,18 @@
           </div>
 
           <div class="proof-wrap">
-            <div class="small-badge">Seu anjo da guarda</div>
-            <h2 class="proof-title" id="angel-reveal-title">Incrível, seu anjo da guarda é São Miguel Arcanjo!</h2>
+            <div class="small-badge">Tu ángel de la guarda</div>
+            <h2 class="proof-title" id="angel-reveal-title">¡Increíble, tu ángel de la guarda es el Arcángel San Miguel!</h2>
 
             <div class="angel-image-wrap">
               <div class="angel-image-card">
-                <img src="/imagem/revelacao.webp" alt="São Miguel Arcanjo" />
+                <img src="/imagem/revelacao.webp" alt="Arcángel San Miguel" />
               </div>
             </div>
 
             <div class="angel-highlight-box">
               <p class="angel-highlight-text">
-                Líder do exército celestial, seu canto, o mais intenso, pode realizar milagres financeiros e de cura em menos de 24 horas.
+                Líder del ejército celestial, su canto, el más intenso, puede realizar milagros financieros y de sanación en menos de 24 horas.
               </p>
             </div>
 
@@ -3556,26 +3562,26 @@
           </div>
 
           <div class="question-wrap">
-            <div class="small-badge">Pergunta 1</div>
-            <h2 class="question-title">Em qual área você sente que sua vida está mais travada?</h2>
+            <div class="small-badge">Pregunta 1</div>
+            <h2 class="question-title">¿En qué área sientes que tu vida está más estancada?</h2>
             <p class="question-support"></p>
 
             <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Finanças travadas', 6)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Finanzas estancadas', 6)">
                 <span class="option-emoji">💸</span>
-                <span class="option-text">Finanças travadas</span>
+                <span class="option-text">Finanzas estancadas</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Relacionamentos', 6)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Relaciones', 6)">
                 <span class="option-emoji">💔</span>
-                <span class="option-text">Relacionamentos</span>
+                <span class="option-text">Relaciones</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Na área da saúde', 6)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'En el área de la salud', 6)">
                 <span class="option-emoji">🙏</span>
-                <span class="option-text">Na área da saúde</span>
+                <span class="option-text">En el área de la salud</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'resposta', 'Proteção familiar', 6)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Protección familiar', 6)">
                 <span class="option-emoji">🏠</span>
-                <span class="option-text">Proteção familiar</span>
+                <span class="option-text">Protección familiar</span>
               </button>
             </div>
           </div>
@@ -3592,26 +3598,26 @@
           </div>
 
           <div class="question-wrap">
-            <div class="small-badge">Pergunta 2</div>
-            <h2 class="question-title">E o que mais tem angustiado o seu coração?</h2>
+            <div class="small-badge">Pregunta 2</div>
+            <h2 class="question-title">¿Y qué es lo que más ha angustiado tu corazón?</h2>
             <p class="question-support"></p>
 
             <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Parece que tudo continua bloqueado', 8)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Parece que todo sigue bloqueado', 8)">
                 <span class="option-emoji">😔</span>
-                <span class="option-text">Parece que tudo continua bloqueado</span>
+                <span class="option-text">Parece que todo sigue bloqueado</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Perdi a paz e vivo com medo', 8)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Perdí la paz y vivo con miedo', 8)">
                 <span class="option-emoji">😣</span>
-                <span class="option-text">Perdi a paz e vivo com medo</span>
+                <span class="option-text">Perdí la paz y vivo con miedo</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Já esperei demais e não aguento mais', 8)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Ya esperé demasiado y no aguanto más', 8)">
                 <span class="option-emoji">⏳</span>
-                <span class="option-text">Já esperei demais e não aguento mais</span>
+                <span class="option-text">Ya esperé demasiado y no aguanto más</span>
               </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'resposta', 'Preciso de um sinal claro para continuar', 8)">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Necesito una señal clara para continuar', 8)">
                 <span class="option-emoji">🕊️</span>
-                <span class="option-text">Preciso de um sinal claro para continuar</span>
+                <span class="option-text">Necesito una señal clara para continuar</span>
               </button>
             </div>
           </div>
@@ -3629,27 +3635,27 @@
 
           <div class="proof-wrap">
             <div class="small-badge">Aviso importante</div>
-            <h2 class="proof-title">Você não chegou até aqui por acaso.</h2>
+            <h2 class="proof-title">No llegaste hasta aquí por casualidad.</h2>
 
             <p class="proof-support">
-              <strong>Existe uma bênção</strong> pronta para ser liberada na sua vida.
+              <strong>Existe una bendición</strong> lista para liberarse en tu vida.
             </p>
 
             <p class="proof-support">
-              O Senhor ouviu o seu choro, viu sua luta e sabe exatamente o que falta para o milagre acontecer.
+              El Señor escuchó tu llanto, vio tu lucha y sabe exactamente lo que falta para que el milagro suceda.
             </p>
 
             <p class="proof-support">
-              <strong>Não desista agora.</strong> Algo muito importante está chegando, uma oportunidade enviada por Deus para mudar o seu destino.
+              <strong>No te rindas ahora.</strong> Algo muy importante está llegando, una oportunidad enviada por Dios para cambiar tu destino.
             </p>
 
             <p class="proof-support">
-              Veja o que aconteceu com pessoas que decidiram acreditar e seguir até o final.
+              Mira lo que les sucedió a las personas que decidieron creer y seguir hasta el final.
             </p>
 
             <button class="cta" type="button" onclick="handleContinueButton(8, 'step_7_proof', 7)">
               <span class="btn-content">
-                <span>QUERO CONTINUAR</span>
+                <span>QUIERO CONTINUAR</span>
                 <span class="btn-arrow">→</span>
               </span>
             </button>
@@ -3667,14 +3673,14 @@
           </div>
 
           <div class="proof-wrap">
-            <div class="small-badge">Relatos</div>
-            <h2 class="proof-title">Veja alguns relatos que chegaram até nós</h2>
+            <div class="small-badge">Testimonios</div>
+            <h2 class="proof-title">Mira algunos testimonios que hemos recibido</h2>
 
             <div class="proof-section">
               <div class="carousel-wrap">
                 <button class="carousel-arrow left" type="button" onclick="changeCarousel('top', -1)">‹</button>
                 <div class="carousel-stage">
-                  <img id="carousel-top-img" src="/imagem/3.webp" alt="Relato financeiro 1">
+                  <img id="carousel-top-img" src="/imagem/3.webp" alt="Testimonio financiero 1">
                 </div>
                 <button class="carousel-arrow right" type="button" onclick="changeCarousel('top', 1)">›</button>
               </div>
@@ -3682,12 +3688,12 @@
 
             <div class="proof-section">
               <p class="proof-divider">
-                Essa oração <strong>não é só sobre questões financeiras</strong>. Veja também outros relatos que recebemos.
+                Esta oración <strong>no es solo sobre temas financieros</strong>. Mira también otros testimonios que hemos recibido.
               </p>
               <div class="carousel-wrap">
                 <button class="carousel-arrow left" type="button" onclick="changeCarousel('bottom', -1)">‹</button>
                 <div class="carousel-stage">
-                  <img id="carousel-bottom-img" src="/imagem/5.webp" alt="Outro relato 1">
+                  <img id="carousel-bottom-img" src="/imagem/5.webp" alt="Otro testimonio 1">
                 </div>
                 <button class="carousel-arrow right" type="button" onclick="changeCarousel('bottom', 1)">›</button>
               </div>
@@ -3695,7 +3701,7 @@
 
             <button class="cta" type="button" onclick="handleContinueButton(9, 'step_8_social_prints', 8)">
               <span class="btn-content">
-                <span>PROSSEGUIR</span>
+                <span>PROSEGUIR</span>
                 <span class="btn-arrow">→</span>
               </span>
             </button>
@@ -3713,7 +3719,7 @@
           </div>
 
           <div class="loading-wrap">
-            <div class="small-badge">Liberação em andamento</div>
+            <div class="small-badge">Liberación en curso</div>
 
             <div class="loading-top-progress">
               <div class="loading-top-progress-fill" id="loading-fill"></div>
@@ -3722,15 +3728,15 @@
             <div class="loading-percent" id="loading-percent">0%</div>
 
             <h2 class="loading-title" id="loading-name-text">
-              Estamos preparando sua mensagem
+              Estamos preparando tu mensaje
             </h2>
 
             <div class="loading-image-wrap">
-              <img src="/imagem/9.webp" alt="Imagem de carregamento">
+              <img src="/imagem/9.webp" alt="Imagen de carga">
             </div>
 
             <p class="loading-copy" id="loading-copy-text">
-              <strong>Falta pouco.</strong> A orientação final está sendo preparada para aparecer na próxima etapa.
+              <strong>Ya casi.</strong> La orientación final se está preparando para aparecer en la próxima etapa.
             </p>
           </div>
         </div>
@@ -3745,8 +3751,8 @@
           </div>
 
           <div class="final-vsl-wrap">
-            <div class="small-badge">Oração liberada</div>
-            <h2 class="final-title">Agora ouça com atenção: essa mensagem é para você</h2>
+            <div class="small-badge">Oración liberada</div>
+            <h2 class="final-title">Ahora escucha con atención: ESTE MENSAJE ES PARA TI</h2>
 
             <div class="final-vsl-frame">
               <vturb-smartplayer id="vid-6a443bebc2ae486b8a8442df" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
@@ -3759,17 +3765,15 @@
                 id="final-html-cta"
                 class="final-html-cta"
                 href="https://go.perfectpay.com.br/PPU38CQAUAA"
-                target="_blank"
-                rel="noopener noreferrer"
                 aria-hidden="true">
                 <span class="final-html-cta-content">
-                  <span>Acessar Minha Oração contribuindo com apenas $9.90</span>
+                  <span>Acceder a Mi Oración contribuyendo con solo $9.90</span>
                   <span class="final-html-cta-arrow">→</span>
                 </span>
               </a>
             </div>
 
-            <p class="note"><strong>Assista até o final</strong> para receber a orientação completa.</p>
+            <p class="note"><strong>Mira hasta el final</strong> para recibir la orientación completa.</p>
           </div>
         </div>
       </div>
@@ -3780,13 +3784,13 @@
   <div class="final-exit-overlay" id="final-exit-overlay" aria-hidden="true">
     <div class="final-exit-card" role="dialog" aria-modal="true" aria-labelledby="final-exit-title" aria-describedby="final-exit-text">
       <div class="final-exit-icon">!</div>
-      <h2 class="final-exit-title" id="final-exit-title">Espere, sua mensagem ainda não terminou</h2>
+      <h2 class="final-exit-title" id="final-exit-title">Espera, tu mensaje aún no ha terminado</h2>
       <p class="final-exit-text" id="final-exit-text">
-        Você já chegou na última etapa. Sair agora pode interromper a orientação antes da parte mais importante.
+        Ya llegaste a la última etapa. Salir ahora puede interrumpir la orientación antes de la parte más importante.
       </p>
       <div class="final-exit-actions">
-        <button class="final-exit-continue" type="button" onclick="continueFinalVideo()">VOLTAR E CONTINUAR ASSISTINDO</button>
-        <button class="final-exit-leave" type="button" onclick="leaveToBackredirect()">SAIR MESMO ASSIM</button>
+        <button class="final-exit-continue" type="button" onclick="continueFinalVideo()">VOLVER Y SEGUIR VIENDO</button>
+        <button class="final-exit-leave" type="button" onclick="leaveToBackredirect()">SALIR DE TODOS MODOS</button>
       </div>
     </div>
   </div>
@@ -3844,7 +3848,6 @@
     const ANGEL_LOADING_STEP = 3;
     const ANGEL_LOADING_DURATION = 5000;
     const ANGEL_CIRCLE_CIRCUMFERENCE = 2 * Math.PI * 52;
-    const BACK_REDIRECT_URL = 'back.html';
     const FINAL_HTML_CTA_SECONDS = 517; // 08:37
     const FINAL_CHECKOUT_URL = 'https://go.perfectpay.com.br/PPU38CQAUAA';
 
@@ -3872,13 +3875,13 @@
         index: 0,
         animating: false,
         images: ['/imagem/3.webp', '/imagem/4.webp'],
-        alts: ['Relato financeiro 1', 'Relato financeiro 2']
+        alts: ['Testimonio financiero 1', 'Testimonio financiero 2']
       },
       bottom: {
         index: 0,
         animating: false,
         images: ['/imagem/5.webp', '/imagem/6.webp', '/imagem/7.webp', '/imagem/8.webp'],
-        alts: ['Outro relato 1', 'Outro relato 2', 'Outro relato 3', 'Outro relato 4']
+        alts: ['Otro testimonio 1', 'Otro testimonio 2', 'Otro testimonio 3', 'Otro testimonio 4']
       }
     };
 
@@ -4037,12 +4040,12 @@
       const firstName = getUserFirstName();
 
       if (firstName) {
-        nameEl.innerHTML = `<strong>${firstName}</strong>, estamos preparando sua mensagem.`;
+        nameEl.innerHTML = `<strong>${firstName}</strong>, estamos preparando tu mensaje.`;
       } else {
-        nameEl.innerHTML = `Estamos preparando sua mensagem.`;
+        nameEl.innerHTML = `Estamos preparando tu mensaje.`;
       }
 
-      copyEl.innerHTML = `<strong>Falta pouco.</strong> A orientação final está sendo preparada para aparecer na próxima etapa.`;
+      copyEl.innerHTML = `<strong>Ya casi.</strong> La orientación final se está preparando para aparecer en la próxima etapa.`;
     }
 
     function updateAngelRevealCopy() {
@@ -4052,9 +4055,9 @@
       const firstName = getUserFirstName();
 
       if (firstName) {
-        titleEl.innerHTML = `Incrível, <span class="gold-name">${firstName}</span>! Seu anjo da guarda é São Miguel Arcanjo!`;
+        titleEl.innerHTML = `¡Increíble, <span class="gold-name">${firstName}</span>! ¡Tu ángel de la guarda es el Arcángel San Miguel!`;
       } else {
-        titleEl.innerHTML = `Incrível! Seu anjo da guarda é São Miguel Arcanjo!`;
+        titleEl.innerHTML = `¡Increíble! ¡Tu ángel de la guarda es el Arcángel San Miguel!`;
       }
     }
 
@@ -4167,14 +4170,6 @@
       }
     }
 
-    function getBackredirectUrl() {
-      try {
-        return appendPersistedParamsToUrl(BACK_REDIRECT_URL);
-      } catch (e) {
-        return BACK_REDIRECT_URL;
-      }
-    }
-
     function showFinalExitModal() {
       const overlay = document.getElementById('final-exit-overlay');
       if (!overlay) return;
@@ -4226,13 +4221,20 @@
 
     function leaveToBackredirect() {
       finalExitBypass = true;
-      const finalUrl = getBackredirectUrl();
 
       try { document.body.classList.remove('final-exit-locked'); } catch (e) {}
+      try { sessionStorage.removeItem('quiz_resume_final_vsl'); } catch (e) {}
+
+      setCurrentStepStorage(1);
+
       try {
-        window.location.assign(finalUrl);
+        history.replaceState({ quizStep: 1 }, '', buildStepUrl(1));
+      } catch (e) {}
+
+      try {
+        window.location.reload();
       } catch (e) {
-        window.location.href = finalUrl;
+        window.location.href = buildStepUrl(1);
       }
     }
 
@@ -4301,10 +4303,8 @@
         cta.id = 'final-html-cta';
         cta.className = 'final-html-cta';
         cta.href = FINAL_CHECKOUT_URL;
-        cta.target = '_blank';
-        cta.rel = 'noopener noreferrer';
         cta.setAttribute('aria-hidden', 'true');
-        cta.innerHTML = '<span class="final-html-cta-content"><span>Acessar Minha Oração contribuindo com apenas $9.90</span><span class="final-html-cta-arrow">→</span></span>';
+        cta.innerHTML = '<span class="final-html-cta-content"><span>Acceder a Mi Oración contribuyendo con solo $9.90</span><span class="final-html-cta-arrow">→</span></span>';
         container.appendChild(cta);
       }
 
