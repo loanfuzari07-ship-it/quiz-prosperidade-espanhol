@@ -12,20 +12,17 @@
     --page-dark: #071019;
     --page-dark-2: #0d1821;
     --cream: #f7eedc;
-    --ink: #0d2435;
-    --ink-soft: #283846;
-    --muted: #6d6c66;
-    --gold: #b77a12;
-    --gold-2: #d4a53b;
+    --ink: #f3ecd9;
+    --ink-soft: #d8cdb0;
+    --muted: #a99b78;
+    --gold: #d4a53b;
+    --gold-2: #efbf52;
     --gold-3: #f4d888;
-    --line: rgba(183, 122, 18, .48);
-    --shadow-card: 0 26px 70px rgba(0, 0, 0, .34);
-    --radius-xl: 30px;
-    --radius-lg: 18px;
+    --line: rgba(212, 165, 59, .45);
     --warn-red: #7a0f10;
     --warn-red-2: #a3161a;
-    --green: #1f8a4c;
-    --green-2: #2fb567;
+    --green: #2fb567;
+    --green-2: #4fd685;
   }
 
   * { box-sizing: border-box; }
@@ -40,7 +37,7 @@
     isolation: isolate;
     background:
       radial-gradient(circle at 50% -12%, rgba(244, 216, 136, .13), transparent 34%),
-      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .08), transparent 24%),
+      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .06), transparent 24%),
       linear-gradient(180deg, var(--page-dark-2), var(--page-dark) 50%, #050b10);
     color: var(--ink);
     font-family: 'Lora', Georgia, serif;
@@ -53,8 +50,8 @@
     z-index: 0;
     pointer-events: none;
     background:
-      radial-gradient(circle at top center, rgba(249, 230, 177, .12), transparent 33%),
-      radial-gradient(circle at bottom center, rgba(183, 122, 18, .10), transparent 34%);
+      radial-gradient(circle at top center, rgba(249, 230, 177, .10), transparent 33%),
+      radial-gradient(circle at bottom center, rgba(183, 122, 18, .08), transparent 34%);
   }
 
   /* ===================== BARRA DE DESTAQUE (TOPO) ===================== */
@@ -89,99 +86,66 @@
     text-shadow: 0 0 14px rgba(255, 226, 122, .5);
   }
 
-  /* ===================== CONTEÚDO PRINCIPAL ===================== */
+  /* ===================== CONTEÚDO PRINCIPAL (SEM CARD) ===================== */
   .page {
     position: relative;
     z-index: 2;
     max-width: 620px;
     margin: 0 auto;
-    padding: 34px 16px 54px;
-  }
-
-  .panel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: var(--radius-xl);
-    padding: 34px 28px 30px;
-    color: var(--ink);
-    background:
-      radial-gradient(circle at 16% 18%, rgba(255,255,255,.68), transparent 19%),
-      radial-gradient(circle at 80% 8%, rgba(244,216,136,.18), transparent 24%),
-      linear-gradient(180deg, #fff8ea 0%, #f7ecd6 52%, #fff6e8 100%);
-    border: 1px solid rgba(213, 172, 91, .72);
-    box-shadow:
-      var(--shadow-card),
-      inset 0 0 0 2px rgba(255,255,255,.60),
-      inset 0 0 0 5px rgba(177, 125, 34, .10);
-  }
-
-  .panel::before {
-    content: "";
-    position: absolute;
-    inset: 12px;
-    border-radius: calc(var(--radius-xl) - 12px);
-    border: 1px solid rgba(164, 107, 14, .33);
-    pointer-events: none;
+    padding: 40px 22px 60px;
   }
 
   .copy-text {
-    position: relative;
-    z-index: 3;
-    margin: 0 0 20px;
+    margin: 0 0 22px;
     text-align: center;
     font-family: 'Lora', Georgia, serif;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--ink-soft);
   }
 
   .copy-text .accent {
-    color: var(--gold);
+    color: var(--gold-2);
     font-weight: 700;
   }
 
   .copy-text.emphasis {
     font-family: 'Cinzel', serif;
-    font-size: 15.5px;
+    font-size: 16.5px;
     font-weight: 700;
-    line-height: 1.5;
-    color: var(--ink);
+    line-height: 1.55;
+    color: var(--cream);
     letter-spacing: -.005em;
   }
 
   .divider {
-    position: relative;
-    z-index: 3;
-    width: 100px;
+    width: 110px;
     height: 1px;
-    margin: 0 auto 22px;
+    margin: 0 auto 26px;
     background: linear-gradient(90deg, transparent, var(--line), transparent);
   }
 
   /* ===================== BLOCO DE PREÇO ===================== */
   .price-block {
-    position: relative;
-    z-index: 3;
     text-align: center;
-    margin: 0 0 22px;
+    margin: 0 0 26px;
   }
 
   .price-old {
     display: inline-block;
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-family: 'Cinzel', serif;
     font-size: 22px;
     font-weight: 700;
-    color: #b3453d;
+    color: #d97a6f;
     text-decoration: line-through;
     text-decoration-thickness: 2px;
-    opacity: .78;
+    opacity: .8;
   }
 
   .price-label {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     font-family: 'Cinzel', serif;
     font-size: 13.5px;
     font-weight: 700;
@@ -190,47 +154,34 @@
   }
 
   .price-label .off {
-    color: #b3261e;
+    color: #ff6b5e;
     font-weight: 800;
-  }
-
-  .price-new-wrap {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 4px;
-    padding: 10px 30px;
-    border-radius: 999px;
-    background: linear-gradient(180deg, #ffffff 0%, #eafbf1 100%);
-    border: 1.5px solid rgba(31, 138, 76, .45);
-    box-shadow: 0 10px 24px rgba(31, 138, 76, .18), inset 0 1px 0 rgba(255,255,255,.9);
   }
 
   .price-new {
+    display: block;
     font-family: 'Cinzel', serif;
-    font-size: 44px;
+    font-size: 52px;
     font-weight: 800;
-    color: var(--green);
+    color: var(--green-2);
     letter-spacing: -.01em;
-    text-shadow: 0 1px 0 rgba(255,255,255,.6);
+    text-shadow: 0 0 24px rgba(79, 214, 133, .35);
   }
 
   .urgency-text {
-    position: relative;
-    z-index: 3;
-    margin: 0 0 26px;
+    margin: 0 0 30px;
     text-align: center;
     font-family: 'Cinzel', serif;
     font-size: 15px;
     font-weight: 700;
     line-height: 1.45;
-    color: #8a3a12;
+    color: var(--gold-3);
+    text-shadow: 0 0 14px rgba(244,216,136,.22);
   }
 
   /* ===================== INFORMAÇÕES DA OFERTA ===================== */
   .offer-meta {
-    position: relative;
-    z-index: 3;
-    margin: 0 auto 22px;
+    margin: 0 auto 26px;
     text-align: center;
   }
 
@@ -243,17 +194,15 @@
   }
 
   .offer-meta p:first-child {
-    color: var(--ink);
+    color: var(--cream);
   }
 
   .offer-meta p:last-child {
-    color: var(--gold);
+    color: var(--gold-2);
   }
 
   /* ===================== ÁREA DO WIDGET DA HOTMART ===================== */
   .hotmart-widget-wrap {
-    position: relative;
-    z-index: 3;
     width: 100%;
     margin: 0 auto;
   }
@@ -262,7 +211,7 @@
     text-align: center;
     padding: 22px;
     border-radius: 14px;
-    border: 1px dashed rgba(183, 122, 18, .45);
+    border: 1px dashed rgba(212, 165, 59, .4);
     font-family: 'Lora', Georgia, serif;
     font-size: 13px;
     font-style: italic;
@@ -280,42 +229,56 @@
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <div class="page">
-    <div class="panel">
-      <p class="copy-text">
-        Realmente quiero que puedas comenzar tu camino de <span class="accent">prosperidad y abundancia</span> con la máxima fuerza, uniendo el poder de la <span class="accent">Oración Consagrada del Arcángel Miguel</span> + <span class="accent">La Jornada con Mi Ángel</span>.
-      </p>
+    <p class="copy-text">
+      Realmente quiero que puedas comenzar tu camino de <span class="accent">prosperidad y abundancia</span> con la máxima fuerza, uniendo el poder de la <span class="accent">Oración Consagrada del Arcángel Miguel</span> + <span class="accent">La Jornada con Mi Ángel</span>.
+    </p>
 
-      <p class="copy-text emphasis">
-        Por eso, te estamos ofreciendo un súper <span class="accent">descuento del 50%</span> para que puedas asegurar tu acceso a la <span class="accent">Jornada con Mi Ángel</span> ahora mismo 👇
-      </p>
+    <p class="copy-text emphasis">
+      Por eso, te estamos ofreciendo un súper <span class="accent">descuento del 50%</span> para que puedas asegurar tu acceso a la <span class="accent">Jornada con Mi Ángel</span> ahora mismo 👇
+    </p>
 
-      <div class="divider"></div>
+    <div class="divider"></div>
 
-      <div class="price-block">
-        <div class="price-old">$9.90</div>
-        <p class="price-label">Precio exclusivo en esta página (<span class="off">50% OFF</span>):</p>
-        <div class="price-new-wrap">
-          <span class="price-new">$4.95</span>
-        </div>
-      </div>
+    <div class="price-block">
+      <div class="price-old">$19</div>
+      <p class="price-label">Precio exclusivo en esta página (<span class="off">50% OFF</span>):</p>
+      <span class="price-new">$9.50</span>
+    </div>
 
-      <p class="urgency-text">Pero tienes que decidir ahora, no volverás a ver este precio después 👇</p>
+    <p class="urgency-text">Pero tienes que decidir ahora, no volverás a ver este precio después 👇</p>
 
-      <div class="offer-meta">
-        <p>Pago único · Acceso inmediato</p>
-        <p>30 días de garantía total sin preguntas</p>
-      </div>
+    <div class="offer-meta">
+      <p>Pago único · Acceso inmediato</p>
+      <p>30 días de garantía total sin preguntas</p>
+    </div>
 
-      <!--
-        ============================================================
-        ESPACIO RESERVADO PARA EL WIDGET/BOTÓN DE DOWNSELL DE HOTMART
-        Reemplaza el contenido de #hotmart-downsell-slot por el
-        componente HTML/script que Hotmart proporciona.
-        ============================================================
-      -->
-      <div id="hotmart-downsell-slot" class="hotmart-widget-wrap">
-        <p class="hotmart-placeholder-note">Espacio reservado para el widget de Hotmart</p>
-      </div>
+    <!--
+      ============================================================
+      ESPACIO RESERVADO PARA EL WIDGET/BOTÓN DE DOWNSELL DE HOTMART
+      Reemplaza el contenido de #hotmart-downsell-slot por el
+      componente HTML/script que Hotmart proporciona.
+      ============================================================
+    -->
+    <div id="hotmart-downsell-slot" class="hotmart-widget-wrap">
+      <!-- HOTMART - Sales Funnel Widget -->
+      <!--- sales funnel container --->
+      <div id="hotmart-sales-funnel"></div>
+      <!--- script load and setup (com espera segura pelo carregamento) --->
+      <script>
+        (function () {
+          var s = document.createElement('script');
+          s.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
+          s.onload = function () {
+            try {
+              if (typeof checkoutElements !== 'undefined') {
+                checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+              }
+            } catch (e) {}
+          };
+          document.head.appendChild(s);
+        })();
+      </script>
+      <!-- HOTMART - Sales Funnel Widget -->
     </div>
   </div>
 
