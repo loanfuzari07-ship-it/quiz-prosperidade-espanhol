@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>¡Gracias por tu compra! - Templo Divino</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Cormorant+Garamond:wght@600;700;800&family=Lora:wght@400;500;600;700&display=swap');
+
+  :root {
+    --page-dark: #071019;
+    --page-dark-2: #0d1821;
+    --cream: #f7eedc;
+    --ink: #0d2435;
+    --ink-soft: #283846;
+    --muted: #6d6c66;
+    --gold: #b77a12;
+    --gold-2: #d4a53b;
+    --gold-3: #f4d888;
+    --line: rgba(183, 122, 18, .48);
+    --shadow-card: 0 26px 70px rgba(0, 0, 0, .34);
+    --radius-xl: 34px;
+    --radius-lg: 20px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100svh;
+  }
+
+  body {
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(circle at 50% -12%, rgba(244, 216, 136, .13), transparent 34%),
+      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .08), transparent 24%),
+      linear-gradient(180deg, var(--page-dark-2), var(--page-dark) 50%, #050b10);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 14px;
+  }
+
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at top center, rgba(249, 230, 177, .12), transparent 33%),
+      radial-gradient(circle at bottom center, rgba(183, 122, 18, .10), transparent 34%);
+  }
+
+  .panel {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    padding: 38px 30px 32px;
+    color: var(--ink);
+    background:
+      radial-gradient(circle at 16% 18%, rgba(255,255,255,.68), transparent 19%),
+      radial-gradient(circle at 80% 8%, rgba(244,216,136,.18), transparent 24%),
+      linear-gradient(180deg, #fff8ea 0%, #f7ecd6 52%, #fff6e8 100%);
+    border: 1px solid rgba(213, 172, 91, .72);
+    box-shadow:
+      var(--shadow-card),
+      inset 0 0 0 2px rgba(255,255,255,.60),
+      inset 0 0 0 5px rgba(177, 125, 34, .10);
+    text-align: center;
+  }
+
+  .panel::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border-radius: calc(var(--radius-xl) - 12px);
+    border: 1px solid rgba(164, 107, 14, .33);
+    pointer-events: none;
+  }
+
+  .success-icon {
+    position: relative;
+    z-index: 3;
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 20px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 32% 22%, #fff 0%, #fff7e6 40%, #edd6a4 100%);
+    border: 1px solid rgba(183, 122, 18, .5);
+    box-shadow: 0 12px 22px rgba(91, 56, 6, .18), inset 0 1px 0 rgba(255,255,255,.85);
+  }
+
+  .success-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .badge {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    margin: 0 auto 16px;
+    padding: 7px 18px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #fff8ea, #f2e0b4);
+    border: 1px solid rgba(183, 122, 18, .4);
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 27px;
+    font-weight: 800;
+    color: var(--ink);
+    line-height: 1.28;
+    letter-spacing: -.01em;
+  }
+
+  .subtitle {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 22px;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+
+  .info-box {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 24px;
+    padding: 20px 20px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 248, 232, .92), rgba(247, 236, 210, .85));
+    border: 1px solid rgba(183, 122, 18, .30);
+    text-align: left;
+  }
+
+  .info-box p {
+    margin: 0 0 10px;
+    font-size: 15.5px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .info-box p:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-box strong {
+    color: var(--gold);
+  }
+
+  .divider {
+    position: relative;
+    z-index: 3;
+    width: 90px;
+    height: 1px;
+    margin: 0 auto 22px;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+  }
+
+  .support-label {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 14px;
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+
+  .support-btn {
+    position: relative;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #132637 0%, #07131d 54%, #040b12 100%);
+    color: #f4e8c9;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .03em;
+    border: 1px solid rgba(212, 165, 59, .55);
+    box-shadow: 0 12px 24px rgba(0,0,0,.28);
+    transition: transform .15s ease;
+  }
+
+  .support-btn:active {
+    transform: scale(.98);
+  }
+
+  .footer-note {
+    position: relative;
+    z-index: 3;
+    margin-top: 18px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <div class="panel">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 6L9 17L4 12" stroke="#b77a12" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="badge">Compra confirmada</div>
+
+    <h1>¡Gracias por tu compra!</h1>
+    <p class="subtitle">Tu pago fue completado con éxito.</p>
+
+    <div class="info-box">
+      <p>En breve recibirás un <strong>correo electrónico</strong> con todas las instrucciones para acceder a tu producto.</p>
+      <p><strong>Importante:</strong> no olvides revisar también tu carpeta de <strong>spam / correo no deseado</strong>. El correo llegará a nombre de <strong>Hotmart</strong>.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="support-label">¿No recibiste el correo o tienes dificultades para acceder?</p>
+
+    <a class="support-btn" href="mailto:lanovdigital@gmail.com?subject=Ayuda%20con%20mi%20compra&body=Hola%2C%20necesito%20ayuda%20para%20acceder%20a%20mi%20producto.">
+      ✉️ Contactar con soporte
+    </a>
+
+    <p class="footer-note">Responderemos tu solicitud lo antes posible.</p>
+  </div>
+</body>
+</html>
