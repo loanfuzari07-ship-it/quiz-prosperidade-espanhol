@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>No accedas antes de ver esto - Templo Divino</title>
+
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a495a9f8e6249c9520ee03d/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Cormorant+Garamond:wght@600;700;800&family=Lora:wght@400;500;600;700&display=swap');
+
+  :root {
+    --page-dark: #071019;
+    --page-dark-2: #0d1821;
+    --cream: #f7eedc;
+    --ink: #0d2435;
+    --ink-soft: #283846;
+    --muted: #6d6c66;
+    --gold: #b77a12;
+    --gold-2: #d4a53b;
+    --gold-3: #f4d888;
+    --line: rgba(183, 122, 18, .48);
+    --shadow-card: 0 26px 70px rgba(0, 0, 0, .34);
+    --radius-xl: 30px;
+    --radius-lg: 18px;
+    --warn-red: #7a0f10;
+    --warn-red-2: #a3161a;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(circle at 50% -12%, rgba(244, 216, 136, .13), transparent 34%),
+      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .08), transparent 24%),
+      linear-gradient(180deg, var(--page-dark-2), var(--page-dark) 50%, #050b10);
+    color: var(--ink);
+    font-family: 'Lora', Georgia, serif;
+    min-height: 100svh;
+  }
+
+  .bg-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at top center, rgba(249, 230, 177, .12), transparent 33%),
+      radial-gradient(circle at bottom center, rgba(183, 122, 18, .10), transparent 34%);
+  }
+
+  /* ===================== BARRA DE ALERTA (TOPO) ===================== */
+  .alert-bar {
+    position: relative;
+    z-index: 5;
+    background:
+      radial-gradient(circle at 50% 0%, rgba(255,255,255,.10), transparent 40%),
+      linear-gradient(180deg, var(--warn-red-2) 0%, var(--warn-red) 100%);
+    border-bottom: 2px solid rgba(244, 216, 136, .55);
+    padding: 16px 16px 18px;
+    text-align: center;
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+  }
+
+  .alert-title {
+    margin: 0 0 8px;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(15px, 4.6vw, 21px);
+    font-weight: 800;
+    letter-spacing: .01em;
+    color: #ffe27a;
+    text-shadow: 0 2px 6px rgba(0,0,0,.4);
+    line-height: 1.3;
+  }
+
+  .alert-subtitle {
+    margin: 0 0 14px;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(12px, 3.4vw, 15px);
+    font-weight: 700;
+    letter-spacing: .04em;
+    color: #fff8ea;
+    text-transform: uppercase;
+  }
+
+  .alert-progress-track {
+    position: relative;
+    width: min(100%, 520px);
+    height: 26px;
+    margin: 0 auto;
+    border-radius: 999px;
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(0,0,0,.15);
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.18);
+  }
+
+  .alert-progress-fill {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #3fae6a 0%, #58c983 100%);
+    animation: alertProgress 22s cubic-bezier(.14,.75,.24,1) forwards;
+  }
+
+  .alert-progress-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 800;
+    color: #123018;
+    z-index: 2;
+  }
+
+  @keyframes alertProgress {
+    0%   { width: 0%; }
+    20%  { width: 38%; }
+    45%  { width: 61%; }
+    70%  { width: 79%; }
+    90%  { width: 91%; }
+    100% { width: 96%; }
+  }
+
+  /* ===================== CONTEÚDO PRINCIPAL ===================== */
+  .page {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 30px 16px 50px;
+  }
+
+  .headline {
+    margin: 0 0 14px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(19px, 5.4vw, 25px);
+    font-weight: 800;
+    line-height: 1.34;
+    color: var(--cream);
+    letter-spacing: -.005em;
+  }
+
+  .headline .accent {
+    text-decoration: underline;
+    text-decoration-color: var(--gold-3);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    color: #fff;
+  }
+
+  .subheadline {
+    margin: 0 auto 26px;
+    max-width: 520px;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(14px, 3.9vw, 17px);
+    font-weight: 700;
+    line-height: 1.42;
+    color: var(--gold-3);
+    text-shadow: 0 0 16px rgba(244,216,136,.28);
+  }
+
+  /* ===================== BLOCO DO VÍDEO (VTURB) ===================== */
+  .video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 22px;
+    border-radius: 20px;
+    padding: 8px;
+    background: linear-gradient(180deg, #f7e3b0 0%, #d5a040 34%, #f7e5b8 100%);
+    box-shadow:
+      0 18px 36px rgba(0,0,0,.38),
+      inset 0 1px 0 rgba(255,255,255,.80);
+  }
+
+  .video-frame-inner {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid rgba(168,110,13,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-placeholder-note {
+    color: rgba(255,255,255,.35);
+    font-family: 'Lora', Georgia, serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  /* ===================== INFORMAÇÕES DA OFERTA ===================== */
+  .offer-meta {
+    margin: 0 auto 26px;
+    text-align: center;
+  }
+
+  .offer-meta p {
+    margin: 0 0 6px;
+    font-family: 'Cinzel', serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    color: var(--ink-soft);
+  }
+
+  .offer-meta p:first-child {
+    color: var(--cream);
+  }
+
+  .offer-meta p:last-child {
+    color: var(--gold-3);
+  }
+
+  /* ===================== ÁREA DO BOTÃO DA HOTMART ===================== */
+  .hotmart-btn-wrap {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 22px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 248, 232, .10), rgba(247, 236, 210, .06));
+    border: 1px dashed rgba(212, 165, 59, .5);
+    text-align: center;
+  }
+
+  .hotmart-btn-wrap p {
+    margin: 0;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 13px;
+    color: rgba(247, 238, 220, .55);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-layer"></div>
+
+  <!-- ===================== BARRA DE ALERTA (TOPO) ===================== -->
+  <div class="alert-bar">
+    <p class="alert-title">⚠️ ESPERA: NO SALGAS NI ACTUALICES ESTA PÁGINA...</p>
+    <p class="alert-subtitle">Tu acceso se está finalizando...</p>
+    <div class="alert-progress-track">
+      <div class="alert-progress-fill"></div>
+      <div class="alert-progress-label">Procesando...</div>
+    </div>
+  </div>
+
+  <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
+  <div class="page">
+    <h1 class="headline">
+      <span class="accent">NO ACCEDAS a tu Oración Consagrada</span> antes de ver esto 👇
+    </h1>
+
+    <p class="subheadline">
+      ESTE PRÓXIMO PASO PUEDE SER DECISIVO PARA EL ÉXITO DE TU VIDA PRÓSPERA Y ABUNDANTE
+    </p>
+
+    <div class="video-frame">
+      <div class="video-frame-inner">
+        <!--
+          ============================================================
+          ESPACIO RESERVADO PARA EL PLAYER VTURB
+          Reemplaza este comentario por el embed completo que vas a
+          enviar (la etiqueta <vturb-smartplayer> + el <script> del
+          player). Todo debe quedar dentro de #vturb-upsell-slot para
+          conservar el encaje dentro del marco dorado.
+          ============================================================
+        -->
+        <div id="vturb-upsell-slot" style="width:100%;">
+          <vturb-smartplayer id="vid-6a495a9f8e6249c9520ee03d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a495a9f8e6249c9520ee03d/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-meta">
+      <p>Pago único · Acceso inmediato</p>
+      <p>30 días de garantía total sin preguntas</p>
+    </div>
+
+    <!--
+      ============================================================
+      ESPACIO RESERVADO PARA EL BOTÓN DE UPSELL DE HOTMART
+      Reemplaza el contenido de #hotmart-upsell-button-slot por el
+      componente HTML/script que Hotmart proporciona para el botón
+      de upsell one-click.
+      ============================================================
+    -->
+    <div id="hotmart-upsell-button-slot" class="hotmart-btn-wrap">
+      <p>Espacio reservado para el botón de upsell de Hotmart</p>
+    </div>
+  </div>
+
+  <script>
+    // Aviso suave al intentar salir o actualizar, reforzando la urgencia.
+    window.addEventListener('beforeunload', function (e) {
+      e.preventDefault();
+      e.returnValue = '';
+    });
+  </script>
+</body>
+</html>
