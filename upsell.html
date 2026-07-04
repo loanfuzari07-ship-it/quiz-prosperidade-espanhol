@@ -8,6 +8,7 @@
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
 <link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a495a9f8e6249c9520ee03d/v4/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/6a4959fc12467ad3e496cf05/main.m3u8" as="fetch">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
@@ -219,6 +220,18 @@
   .offer-meta {
     margin: 0 auto 26px;
     text-align: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .6s ease;
+    pointer-events: none;
+  }
+
+  .offer-meta.is-visible {
+    opacity: 1;
+    max-height: none;
+    overflow: visible;
+    pointer-events: auto;
   }
 
   .offer-meta p {
@@ -244,7 +257,18 @@
     margin: 0 auto;
     height: auto;
     min-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity .6s ease;
+    pointer-events: none;
+  }
+
+  .hotmart-widget-wrap.is-visible {
+    opacity: 1;
+    max-height: none;
     overflow: visible;
+    pointer-events: auto;
   }
 </style>
 </head>
@@ -289,7 +313,7 @@
       </div>
     </div>
 
-    <div class="offer-meta">
+    <div class="offer-meta" id="upsell-offer-meta">
       <p>Pago único · Acceso inmediato</p>
       <p>30 días de garantía total sin preguntas</p>
     </div>
@@ -331,6 +355,57 @@
       e.preventDefault();
       e.returnValue = '';
     });
+  </script>
+
+  <script>
+    // ============================================================
+    // Revela el CTA (texto de oferta + widget de Hotmart) recién
+    // cuando el video del VTurb alcanza los 7:19 (439s) de
+    // reproducción real. El contador solo corre mientras el video
+    // está efectivamente reproduciéndose (currentTime del player).
+    // ============================================================
+    (function () {
+      var CTA_REVEAL_SECONDS = 439; // 07:19
+      var hooked = false;
+      var attempts = 0;
+
+      function showCta() {
+        var meta = document.getElementById('upsell-offer-meta');
+        var widget = document.getElementById('hotmart-upsell-button-slot');
+        if (meta) meta.classList.add('is-visible');
+        if (widget) widget.classList.add('is-visible');
+      }
+
+      function tryHookPlayer() {
+        if (hooked) return;
+
+        if (typeof window.smartplayer === 'undefined' || !(window.smartplayer.instances && window.smartplayer.instances.length)) {
+          attempts += 1;
+          if (attempts >= 40) return;
+          setTimeout(tryHookPlayer, 500);
+          return;
+        }
+
+        var instance = window.smartplayer.instances[0];
+        if (!instance || typeof instance.on !== 'function') {
+          attempts += 1;
+          if (attempts >= 40) return;
+          setTimeout(tryHookPlayer, 500);
+          return;
+        }
+
+        hooked = true;
+
+        instance.on('timeupdate', function () {
+          var currentTime = (instance.video && instance.video.currentTime) || 0;
+          if (currentTime >= CTA_REVEAL_SECONDS) {
+            showCta();
+          }
+        });
+      }
+
+      setTimeout(tryHookPlayer, 600);
+    })();
   </script>
 </body>
 </html>
