@@ -200,8 +200,8 @@
       align-items: center;
     }
 
-    #step-8.step-top.active,
-    #step-10.step-top.active {
+    #step-13.step-top.active,
+    #step-16.step-top.active {
       align-items: flex-start;
     }
 
@@ -408,9 +408,9 @@
     .divider-soft {
       position: relative;
       z-index: 3;
-      width: 160px;
+      width: 170px;
       height: 20px;
-      margin: 0 auto 12px;
+      margin: 0 auto 14px;
     }
 
     .divider-soft::before,
@@ -418,17 +418,16 @@
       content: "";
       position: absolute;
       top: 50%;
-      width: 64px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      width: 70px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
     }
 
     .divider-soft::before { left: 0; }
     .divider-soft::after { right: 0; }
 
     .divider-soft {
-      background:
-        radial-gradient(circle at 50% 50%, var(--gold-2) 0 2px, transparent 2.5px);
+      background: none;
     }
 
     .divider-soft::selection { background: transparent; }
@@ -447,6 +446,422 @@
 
     .divider-soft::before { transform: translateY(-50%); }
     .divider-soft::after { transform: translateY(-50%); }
+
+    .fun-warning-box {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      max-width: 400px;
+      margin: 0 auto 22px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fff8de 0%, #fbedb6 100%);
+      border: 1px solid rgba(183, 122, 18, .38);
+      box-shadow:
+        0 8px 18px rgba(94, 60, 8, .10),
+        inset 0 1px 0 rgba(255,255,255,.75);
+      text-align: left;
+    }
+
+    .fun-warning-icon {
+      flex: none;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .fun-warning-text {
+      margin: 0;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: #6b4d0e;
+    }
+
+    .fun-warning-text strong {
+      color: #8a5c07;
+      font-weight: 800;
+    }
+
+    @media (max-width: 390px) {
+      .fun-warning-box {
+        padding: 12px 13px;
+        gap: 8px;
+      }
+
+      .fun-warning-text {
+        font-size: 13px;
+      }
+    }
+
+    .gender-select-wrap {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto 20px;
+    }
+
+    .gender-card {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 543 / 724;
+      border-radius: 14px;
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+      background: #0b1320;
+      border: 1px solid rgba(168, 110, 13, .6);
+      box-shadow:
+        0 10px 22px rgba(0,0,0,.28),
+        inset 0 0 0 1px rgba(255,255,255,.10);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .gender-card:active {
+      transform: scale(.97);
+    }
+
+    .gender-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .gender-card-label {
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      z-index: 2;
+      padding: 9px 10px;
+      border-radius: 10px;
+      text-align: center;
+      background: linear-gradient(180deg, #f7e3b0 0%, #d5a040 100%);
+      border: 1px solid rgba(146, 88, 7, .5);
+      color: #3a2603;
+      font-family: 'Cinzel', serif;
+      font-size: 13.5px;
+      font-weight: 800;
+      letter-spacing: .01em;
+      box-shadow: 0 6px 14px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.6);
+    }
+
+    @media (max-width: 390px) {
+      .gender-card-label {
+        font-size: 12px;
+        padding: 7px 8px;
+      }
+    }
+
+    .trust-note {
+      position: relative;
+      z-index: 3;
+      max-width: 400px;
+      margin: 0 auto 18px;
+      padding: 13px 15px;
+      border-radius: 14px;
+      background: rgba(13, 36, 53, .05);
+      border: 1px solid rgba(13, 36, 53, .12);
+      text-align: left;
+    }
+
+    .trust-note-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin: 0 0 8px;
+    }
+
+    .trust-note-icon {
+      flex: none;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    .trust-note-text {
+      margin: 0;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 13.5px;
+      font-weight: 500;
+      line-height: 1.4;
+      color: var(--ink-soft);
+    }
+
+    .trust-note-text strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .trust-note-stat {
+      margin: 0;
+      padding-left: 24px;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    .month-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 11px;
+      margin: 0 0 6px;
+    }
+
+    .month-btn {
+      display: block;
+      width: 100%;
+      padding: 15px 10px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fffaf0 0%, #f7ecd6 100%);
+      border: 1px solid rgba(183, 122, 18, .32);
+      box-shadow:
+        0 6px 14px rgba(94, 60, 8, .08),
+        inset 0 1px 0 rgba(255,255,255,.85);
+      color: var(--ink);
+      font-family: 'Cinzel', serif;
+      font-size: 14.5px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+
+    .month-btn:active {
+      transform: scale(.97);
+      border-color: rgba(183, 122, 18, .6);
+    }
+
+    .month-btn-full {
+      grid-column: 1 / -1;
+    }
+
+    .commitment-carousel-label {
+      font-size: 14.5px !important;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .final-info-card {
+      position: relative;
+      z-index: 3;
+      max-width: 380px;
+      margin: 0 auto 20px;
+      padding: 16px 20px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fff8ea 0%, #f2e0b4 100%);
+      border: 1px solid rgba(183, 122, 18, .4);
+      box-shadow:
+        0 10px 22px rgba(94, 60, 8, .12),
+        inset 0 1px 0 rgba(255,255,255,.8);
+      text-align: left;
+    }
+
+    .final-info-row {
+      margin: 0;
+      padding: 7px 0;
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      color: var(--ink);
+      border-bottom: 1px solid rgba(183, 122, 18, .18);
+    }
+
+    .final-info-row:last-child {
+      border-bottom: none;
+    }
+
+    .final-info-label {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: .01em;
+      color: var(--gold);
+      margin-right: 4px;
+    }
+
+    .year-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin: 0 0 6px;
+    }
+
+    .year-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 6px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fffaf0 0%, #f7ecd6 100%);
+      border: 1px solid rgba(183, 122, 18, .32);
+      box-shadow:
+        0 6px 14px rgba(94, 60, 8, .08),
+        inset 0 1px 0 rgba(255,255,255,.85);
+      color: var(--ink);
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+
+    .year-btn:active {
+      transform: scale(.96);
+      border-color: rgba(183, 122, 18, .6);
+    }
+
+    .year-btn-full {
+      grid-column: 1 / -1;
+    }
+
+    .marital-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 0 0 6px;
+    }
+
+    .marital-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 18px 10px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #fffaf0 0%, #f7ecd6 100%);
+      border: 1px solid rgba(183, 122, 18, .32);
+      box-shadow:
+        0 8px 18px rgba(94, 60, 8, .09),
+        inset 0 1px 0 rgba(255,255,255,.85);
+      cursor: pointer;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+
+    .marital-card:active {
+      transform: scale(.96);
+      border-color: rgba(183, 122, 18, .6);
+    }
+
+    .marital-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      color: var(--gold);
+    }
+
+    .marital-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .marital-label {
+      font-family: 'Cinzel', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: .01em;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    @media (max-width: 390px) {
+      .marital-card {
+        padding: 15px 8px;
+        gap: 7px;
+      }
+
+      .marital-icon {
+        width: 34px;
+        height: 34px;
+      }
+
+      .marital-label {
+        font-size: 12.3px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .year-btn {
+        padding: 12px 5px;
+        font-size: 12.6px;
+      }
+
+      .year-grid {
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .month-btn {
+        padding: 13px 8px;
+        font-size: 13.3px;
+      }
+
+      .month-grid {
+        gap: 9px;
+      }
+    }
+
+    .day-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 0 6px;
+    }
+
+    .day-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #fffaf0 0%, #f7ecd6 100%);
+      border: 1px solid rgba(183, 122, 18, .32);
+      box-shadow:
+        0 6px 14px rgba(94, 60, 8, .08),
+        inset 0 1px 0 rgba(255,255,255,.85);
+      color: var(--ink);
+      font-family: 'Cinzel', serif;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease, border-color .12s ease;
+    }
+
+    .day-btn:active {
+      transform: scale(.94);
+      border-color: rgba(183, 122, 18, .6);
+    }
+
+    @media (max-width: 390px) {
+      .day-btn {
+        width: 43px;
+        height: 43px;
+        font-size: 13.5px;
+      }
+
+      .day-grid {
+        gap: 8px;
+      }
+    }
 
     .image-card,
     .loading-image-wrap,
@@ -738,11 +1153,11 @@
     }
 
     /* Step 4 — "Revelação do anjo" (imagem vertical, 564x1002) */
-    #step-4 .angel-image-wrap {
+    #step-8 .angel-image-wrap {
       width: min(100%, 260px);
     }
 
-    #step-4 .angel-image-card {
+    #step-8 .angel-image-card {
       aspect-ratio: 564 / 1002;
     }
 
@@ -1223,27 +1638,27 @@
     }
 
     #step-2 .panel,
-    #step-5 .panel,
-    #step-6 .panel,
-    #step-7 .panel,
-    #step-9 .panel {
+    #step-10 .panel,
+    #step-11 .panel,
+    #step-12 .panel,
+    #step-15 .panel {
       min-height: min(720px, calc(100svh - 36px));
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    #step-8 .panel,
-    #step-10 .panel {
+    #step-13 .panel,
+    #step-16 .panel {
       padding-top: 30px;
       padding-bottom: 32px;
     }
 
     #step-2 .form-wrap,
-    #step-5 .question-wrap,
-    #step-6 .question-wrap,
-    #step-7 .proof-wrap,
-    #step-9 .loading-wrap {
+    #step-10 .question-wrap,
+    #step-11 .question-wrap,
+    #step-12 .proof-wrap,
+    #step-15 .loading-wrap {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1615,10 +2030,10 @@
       }
 
       #step-2 .panel,
-      #step-5 .panel,
-      #step-6 .panel,
-      #step-7 .panel,
-      #step-9 .panel {
+      #step-10 .panel,
+      #step-11 .panel,
+      #step-12 .panel,
+      #step-15 .panel {
         min-height: calc(100svh - 24px);
       }
     }
@@ -2535,7 +2950,7 @@
 
     #step-1 .hero-title .headline-line {
       display: block !important;
-      white-space: nowrap !important;
+      white-space: normal !important;
     }
 
     #step-1 .hero-title .gold-word {
@@ -2588,27 +3003,27 @@
       line-height: 1 !important;
     }
 
-    #step-5 .question-title,
-    #step-6 .question-title {
+    #step-10 .question-title,
+    #step-11 .question-title {
       letter-spacing: -0.02em !important;
     }
 
-    #step-5 .option-text,
-    #step-6 .option-text {
+    #step-10 .option-text,
+    #step-11 .option-text {
       letter-spacing: 0.005em !important;
     }
 
-    #step-9 .loading-title {
+    #step-15 .loading-title {
       max-width: 420px !important;
       margin-bottom: 12px !important;
     }
 
-    #step-9 .loading-name {
+    #step-15 .loading-name {
       max-width: 390px !important;
       margin-bottom: 14px !important;
     }
 
-    #step-9 .loading-copy {
+    #step-15 .loading-copy {
       max-width: 390px !important;
       font-size: 17.5px !important;
       line-height: 1.52 !important;
@@ -2616,16 +3031,16 @@
 
     @media (min-width: 561px) {
       #step-1 .hero-title {
-        font-size: clamp(38px, 5.2vw, 47px) !important;
+        font-size: clamp(29px, 3.9vw, 36px) !important;
       }
     }
 
     @media (max-width: 560px) {
       #step-1 .hero-title {
         max-width: 100% !important;
-        font-size: clamp(28px, 8.15vw, 33px) !important;
-        line-height: .96 !important;
-        letter-spacing: -0.052em !important;
+        font-size: clamp(21px, 6.3vw, 25px) !important;
+        line-height: 1.12 !important;
+        letter-spacing: -0.03em !important;
         margin-bottom: 12px !important;
       }
 
@@ -2643,34 +3058,34 @@
         transform: translateY(-1px) !important;
       }
 
-      #step-5 .question-title,
-      #step-6 .question-title {
+      #step-10 .question-title,
+      #step-11 .question-title {
         max-width: 365px !important;
         font-size: clamp(30px, 8.1vw, 35px) !important;
         line-height: 1.08 !important;
         letter-spacing: -0.018em !important;
       }
 
-      #step-5 .option-btn,
-      #step-6 .option-btn {
+      #step-10 .option-btn,
+      #step-11 .option-btn {
         min-height: 72px !important;
         padding: 14px 15px !important;
       }
 
-      #step-5 .option-text,
-      #step-6 .option-text {
+      #step-10 .option-text,
+      #step-11 .option-text {
         font-size: 16.4px !important;
         line-height: 1.34 !important;
         letter-spacing: 0.006em !important;
       }
 
-      #step-9 .loading-copy {
+      #step-15 .loading-copy {
         max-width: 350px !important;
         font-size: 16.2px !important;
         line-height: 1.5 !important;
       }
 
-      #step-9 .loading-name {
+      #step-15 .loading-name {
         max-width: 350px !important;
         font-size: 20px !important;
         line-height: 1.32 !important;
@@ -2679,8 +3094,8 @@
 
     @media (max-width: 390px) {
       #step-1 .hero-title {
-        font-size: clamp(25.5px, 7.75vw, 30px) !important;
-        letter-spacing: -0.058em !important;
+        font-size: clamp(19px, 5.9vw, 22px) !important;
+        letter-spacing: -0.025em !important;
       }
 
       #step-1 .cta {
@@ -2696,13 +3111,13 @@
         font-size: 25px !important;
       }
 
-      #step-5 .question-title,
-      #step-6 .question-title {
+      #step-10 .question-title,
+      #step-11 .question-title {
         font-size: clamp(28px, 7.7vw, 31px) !important;
       }
 
-      #step-5 .option-text,
-      #step-6 .option-text {
+      #step-10 .option-text,
+      #step-11 .option-text {
         font-size: 15.7px !important;
       }
     }
@@ -2802,7 +3217,7 @@
        - seta próxima do texto e só ela se move
        - brilho reluzente do botão preservado
        ========================================================= */
-    #step-8 .cta {
+    #step-13 .cta {
       animation: none !important;
       transform: none !important;
       border-width: 2.4px !important;
@@ -2815,12 +3230,12 @@
         inset 0 -10px 16px rgba(0,0,0,.22) !important;
     }
 
-    #step-8 .cta:hover,
-    #step-8 .cta:focus-visible {
+    #step-13 .cta:hover,
+    #step-13 .cta:focus-visible {
       transform: none !important;
     }
 
-    #step-8 .cta .btn-content {
+    #step-13 .cta .btn-content {
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -2831,7 +3246,7 @@
       transform: none !important;
     }
 
-    #step-8 .cta .btn-content > span:first-child {
+    #step-13 .cta .btn-content > span:first-child {
       width: auto !important;
       flex: 0 1 auto !important;
       padding: 0 !important;
@@ -2842,7 +3257,7 @@
       transform: none !important;
     }
 
-    #step-8 .cta .btn-arrow {
+    #step-13 .cta .btn-arrow {
       position: relative !important;
       left: 0;
       top: -1px !important;
@@ -2868,23 +3283,23 @@
     }
 
     @media (max-width: 560px) {
-      #step-8 .cta .btn-content {
+      #step-13 .cta .btn-content {
         gap: 7px !important;
         padding: 0 14px !important;
       }
 
-      #step-8 .cta .btn-arrow {
+      #step-13 .cta .btn-arrow {
         font-size: 28px !important;
       }
     }
 
     @media (max-width: 390px) {
-      #step-8 .cta .btn-content {
+      #step-13 .cta .btn-content {
         gap: 6px !important;
         padding: 0 12px !important;
       }
 
-      #step-8 .cta .btn-arrow {
+      #step-13 .cta .btn-arrow {
         font-size: 25px !important;
       }
     }
@@ -2893,7 +3308,7 @@
     /* =========================================================
        PATCH FINAL V4 — pré-carregamento limpo e sem artefatos visíveis
        ========================================================= */
-    #step-9 .loading-title {
+    #step-15 .loading-title {
       max-width: 370px !important;
       margin: 0 auto 18px !important;
       font-size: clamp(30px, 6.8vw, 40px) !important;
@@ -2902,31 +3317,31 @@
       text-wrap: balance !important;
     }
 
-    #step-9 .loading-title strong {
+    #step-15 .loading-title strong {
       color: var(--gold) !important;
       font-weight: 800 !important;
     }
 
-    #step-9 .loading-copy {
+    #step-15 .loading-copy {
       max-width: 360px !important;
       margin-top: 0 !important;
       font-size: 16.8px !important;
       line-height: 1.48 !important;
     }
 
-    #step-9 .loading-name {
+    #step-15 .loading-name {
       display: none !important;
     }
 
     @media (max-width: 560px) {
-      #step-9 .loading-title {
+      #step-15 .loading-title {
         max-width: 330px !important;
         font-size: clamp(28px, 7.8vw, 34px) !important;
         line-height: 1.08 !important;
         margin-bottom: 16px !important;
       }
 
-      #step-9 .loading-copy {
+      #step-15 .loading-copy {
         max-width: 330px !important;
         font-size: 15.8px !important;
         line-height: 1.46 !important;
@@ -2934,7 +3349,7 @@
     }
 
     @media (max-width: 390px) {
-      #step-9 .loading-title {
+      #step-15 .loading-title {
         max-width: 300px !important;
         font-size: clamp(25px, 7.3vw, 30px) !important;
       }
@@ -3397,28 +3812,310 @@
       <div class="step-inner">
         <div class="panel">
           <div class="topbar centered">
-            <div class="progress"><span style="width: 10%;"></span></div>
+            <div class="progress"><span style="width: 6%;"></span></div>
           </div>
 
-          <div class="hero-badge">Mensaje urgente para ti</div>
           <h1 class="hero-title">
-            <span class="headline-line">Una oración poderosa</span>
-            <span class="headline-line">que va a destrabar todo lo que</span>
-            <span class="headline-line">has estado pidiendo en <span class="gold-word">silencio.</span></span>
+            <span class="headline-line">En solo 30 segundos, descubre cómo</span>
+            <span class="headline-line">conectarte con tu ángel de la guarda</span>
+            <span class="headline-line">y manifestar <span class="gold-word">abundancia y prosperidad</span> en tu vida.</span>
           </h1>
           <div class="divider-soft"></div>
 
-          <div class="hero-figure">
-            <div class="image-card hero-image-card">
-              <img src="/imagem/2.webp" alt="Arcángel Miguel en primer plano" />
-            </div>
+          <div class="fun-warning-box">
+            <span class="fun-warning-icon">⚠️</span>
+            <p class="fun-warning-text">
+              <strong>Atención:</strong> si todo empieza a fluir después de este test, ¡me debes $50 dólares! 😄
+            </p>
           </div>
 
           <p class="below-image">
-            Escribe tu nombre y responde con sinceridad. 
+            Selecciona tu género para comenzar el test.
           </p>
 
+          <div class="gender-select-wrap">
+            <button class="gender-card" type="button" onclick="handleGenderSelect('mujer')">
+              <img src="/imagem/mulher.webp" alt="Mujer" />
+              <span class="gender-card-label">&gt; Mujer</span>
+            </button>
+            <button class="gender-card" type="button" onclick="handleGenderSelect('hombre')">
+              <img src="/imagem/homem.webp" alt="Hombre" />
+              <span class="gender-card-label">&gt; Hombre</span>
+            </button>
+          </div>
+
+          <div class="trust-note">
+            <div class="trust-note-line">
+              <span class="trust-note-icon">🔒</span>
+              <p class="trust-note-text"><strong>Privacidad garantizada:</strong> tus respuestas son 100% anónimas y confidenciales.</p>
+            </div>
+            <p class="trust-note-stat">Más de 98.342 personas ya descubrieron sus bloqueos a través de este test.</p>
+          </div>
+
+          <span class="corner-leaf corner-leaf-left" aria-hidden="true"></span>
+          <span class="corner-leaf corner-leaf-right" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-2" data-step="2">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 13%;"></span></div>
+          </div>
+
           <div class="form-wrap">
+            <h2 class="field-title">Haz clic en el mes en que naciste:</h2>
+            <div class="divider-soft"></div>
+
+            <div class="month-grid">
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Enero')">Enero</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Febrero')">Febrero</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Marzo')">Marzo</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Abril')">Abril</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Mayo')">Mayo</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Junio')">Junio</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Julio')">Julio</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Agosto')">Agosto</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Septiembre')">Septiembre</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Octubre')">Octubre</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Noviembre')">Noviembre</button>
+              <button class="month-btn" type="button" onclick="handleMonthSelect('Diciembre')">Diciembre</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-3" data-step="3">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 19%;"></span></div>
+          </div>
+
+          <div class="form-wrap">
+            <h2 class="field-title">Indica el día de tu nacimiento:</h2>
+            <div class="divider-soft"></div>
+
+            <div class="day-grid" id="day-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-4" data-step="4">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 25%;"></span></div>
+          </div>
+
+          <div class="form-wrap">
+            <h2 class="field-title">¿En qué década naciste?</h2>
+            <div class="divider-soft"></div>
+
+            <div class="month-grid">
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1910')">1910</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1920')">1920</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1930')">1930</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1940')">1940</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1950')">1950</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1960')">1960</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1970')">1970</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1980')">1980</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('1990')">1990</button>
+              <button class="month-btn" type="button" onclick="handleDecadeSelect('2000')">2000</button>
+              <button class="month-btn month-btn-full" type="button" onclick="handleDecadeSelect('2010')">2010</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-5" data-step="5">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 31%;"></span></div>
+          </div>
+
+          <div class="form-wrap">
+            <h2 class="field-title">¿En qué año naciste?</h2>
+            <div class="divider-soft"></div>
+
+            <div class="year-grid" id="year-grid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-6" data-step="6">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 38%;"></span></div>
+          </div>
+
+          <div class="form-wrap">
+            <h2 class="field-title">¿Cuál es tu estado civil?</h2>
+            <div class="divider-soft"></div>
+
+            <div class="marital-grid">
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('Casado(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="8.5" cy="14.5" r="5"></circle>
+                    <circle cx="15.5" cy="14.5" r="5"></circle>
+                  </svg>
+                </span>
+                <span class="marital-label">Casado(a)</span>
+              </button>
+
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('De novio(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9Z"></path>
+                    <path d="M18 3.2l.55 1.45L20 5.2l-1.45.55L18 7.2l-.55-1.45L16 5.2l1.45-.55L18 3.2Z" fill="currentColor" stroke="none"></path>
+                  </svg>
+                </span>
+                <span class="marital-label">De novio(a)</span>
+              </button>
+
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('Comprometido(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="15.5" r="5"></circle>
+                    <path d="M9.4 10.2 12 4.5l2.6 5.7"></path>
+                  </svg>
+                </span>
+                <span class="marital-label">Comprometido(a)</span>
+              </button>
+
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('Soltero(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9Z"></path>
+                  </svg>
+                </span>
+                <span class="marital-label">Soltero(a)</span>
+              </button>
+
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('Separado(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.4 20S4.6 15.9 2.7 11.6A4.6 4.6 0 0 1 10.4 8"></path>
+                    <path d="M13.6 20s5.8-4.1 7.7-8.4a4.6 4.6 0 0 0-7.7-3.6"></path>
+                  </svg>
+                </span>
+                <span class="marital-label">Separado(a)</span>
+              </button>
+
+              <button class="marital-card" type="button" onclick="handleMaritalSelect('Viudo(a)')">
+                <span class="marital-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 20s-7-4.4-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.6-9 9-9 9Z"></path>
+                    <path d="M12.5 8.2 10.8 11.4 13 13.4 11.2 16.6 13 19.4" stroke="#0d2435" stroke-width="1.3"></path>
+                  </svg>
+                </span>
+                <span class="marital-label">Viudo(a)</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-7" data-step="7">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 44%;"></span></div>
+          </div>
+
+          <div class="question-wrap">
+            <h2 class="question-title">¿En qué área sientes que tu vida está más estancada?</h2>
+            <div class="divider-soft"></div>
+            <p class="question-support"></p>
+
+            <div class="options-wrap">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_7_question', 7, 'respuesta', 'Finanzas estancadas', 8)">
+                <span class="option-emoji">💸</span>
+                <span class="option-text">Finanzas estancadas</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_7_question', 7, 'respuesta', 'Relaciones', 8)">
+                <span class="option-emoji">💔</span>
+                <span class="option-text">Relaciones</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_7_question', 7, 'respuesta', 'En el área de la salud', 8)">
+                <span class="option-emoji">🙏</span>
+                <span class="option-text">En el área de la salud</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_7_question', 7, 'respuesta', 'Protección familiar', 8)">
+                <span class="option-emoji">🏠</span>
+                <span class="option-text">Protección familiar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-8" data-step="8">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 50%;"></span></div>
+          </div>
+
+          <div class="question-wrap">
+            <h2 class="question-title">¿Y qué es lo que más ha angustiado tu corazón?</h2>
+            <div class="divider-soft"></div>
+            <p class="question-support"></p>
+
+            <div class="options-wrap">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_8_question', 8, 'respuesta', 'Parece que todo sigue bloqueado', 9)">
+                <span class="option-emoji">😔</span>
+                <span class="option-text">Parece que todo sigue bloqueado</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_8_question', 8, 'respuesta', 'Perdí la paz y vivo con miedo', 9)">
+                <span class="option-emoji">😣</span>
+                <span class="option-text">Perdí la paz y vivo con miedo</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_8_question', 8, 'respuesta', 'Ya esperé demasiado y no aguanto más', 9)">
+                <span class="option-emoji">⏳</span>
+                <span class="option-text">Ya esperé demasiado y no aguanto más</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_8_question', 8, 'respuesta', 'Necesito una señal clara para continuar', 9)">
+                <span class="option-emoji">🕊️</span>
+                <span class="option-text">Necesito una señal clara para continuar</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step step-top" id="step-9" data-step="9">
+      <div class="step-inner">
+        <div class="panel">
+          <div class="topbar">
+            <button class="back-btn" type="button" onclick="prevStep()">←</button>
+            <div class="progress"><span style="width: 56%;"></span></div>
+          </div>
+
+          <div class="form-wrap">
+            <h2 class="field-title">¿Cuál es tu primer nombre?</h2>
+            <div class="divider-soft"></div>
+
             <div class="field-group">
               <label class="field-label" for="user-name">Tu primer nombre</label>
               <div class="input-shell">
@@ -3433,64 +4130,8 @@
               </div>
               <p class="field-error-msg" id="user-name-error">Por favor, escribe tu nombre para continuar.</p>
             </div>
-          </div>
 
-          <button class="cta" type="button" onclick="handleHeroNameStep()">
-            <span class="btn-content">
-              <span>QUIERO RECIBIR ESTA ORACIÓN</span>
-              <span class="btn-arrow">→</span>
-            </span>
-          </button>
-
-          <p class="note">
-            <strong>No llegaste aquí por casualidad.</strong>
-            Continúa para liberar tu mensaje.
-          </p>
-
-          <span class="corner-leaf corner-leaf-left" aria-hidden="true"></span>
-          <span class="corner-leaf corner-leaf-right" aria-hidden="true"></span>
-        </div>
-      </div>
-    </section>
-
-    <section class="step step-top" id="step-2" data-step="2">
-      <div class="step-inner">
-        <div class="panel">
-          <div class="topbar">
-            <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 20%;"></span></div>
-          </div>
-
-          <div class="form-wrap">
-            <div class="small-badge">Tu ángel de la guarda</div>
-            <h2 class="field-title">Antes de continuar, vamos a descubrir cuál es tu ángel de la guarda.</h2>
-            <p class="field-text"></p>
-
-            <div class="angel-image-wrap">
-              <div class="angel-image-card">
-                <img src="/imagem/anjo.webp" alt="Tu ángel de la guarda" />
-              </div>
-            </div>
-
-            <p class="below-image">
-              Para descubrir tu ángel, indícanos:
-            </p>
-
-            <div class="two-field-row">
-              <div class="field-group">
-                <label class="field-label" for="birth-year">¿En qué año naciste?</label>
-                <input class="text-input" id="birth-year" type="text" inputmode="numeric" maxlength="4" placeholder="Ej: 1990" autocomplete="bday-year" />
-                <p class="field-error-msg" id="birth-year-error">Indica el año de tu nacimiento.</p>
-              </div>
-
-              <div class="field-group">
-                <label class="field-label" for="birth-day">¿Qué día naciste?</label>
-                <input class="text-input" id="birth-day" type="text" inputmode="numeric" maxlength="2" placeholder="Ej: 24" autocomplete="bday-day" />
-                <p class="field-error-msg" id="birth-day-error">Indica el día de tu nacimiento.</p>
-              </div>
-            </div>
-
-            <button class="cta" type="button" onclick="handleAngelStep()">
+            <button class="cta" type="button" onclick="handleNameStep()">
               <span class="btn-content">
                 <span>CONTINUAR</span>
                 <span class="btn-arrow">→</span>
@@ -3501,12 +4142,12 @@
       </div>
     </section>
 
-    <section class="step step-centered" id="step-3" data-step="3">
+    <section class="step step-centered" id="step-10" data-step="10">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 30%;"></span></div>
+            <div class="progress"><span style="width: 63%;"></span></div>
           </div>
 
           <div class="loading-wrap">
@@ -3533,12 +4174,12 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-4" data-step="4">
+    <section class="step step-top" id="step-11" data-step="11">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 40%;"></span></div>
+            <div class="progress"><span style="width: 69%;"></span></div>
           </div>
 
           <div class="proof-wrap">
@@ -3557,7 +4198,7 @@
               </p>
             </div>
 
-            <button class="cta" type="button" onclick="handleContinueButton(5, 'step_4_angel_reveal', 4)">
+            <button class="cta" type="button" onclick="handleContinueButton(12, 'step_11_angel_reveal', 11)">
               <span class="btn-content">
                 <span>CONTINUAR</span>
                 <span class="btn-arrow">→</span>
@@ -3568,89 +4209,68 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-5" data-step="5">
+    <section class="step step-top" id="step-12" data-step="12">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 50%;"></span></div>
+            <div class="progress"><span style="width: 75%;"></span></div>
           </div>
 
-          <div class="question-wrap">
-            <div class="small-badge">Pregunta 1</div>
-            <h2 class="question-title">¿En qué área sientes que tu vida está más estancada?</h2>
-            <p class="question-support"></p>
+          <div class="proof-wrap">
+            <h2 class="proof-title">Mira algunas bendiciones financieras que personas recibieron al reconectarse con su ángel:</h2>
 
-            <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Finanzas estancadas', 6)">
-                <span class="option-emoji">💸</span>
-                <span class="option-text">Finanzas estancadas</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Relaciones', 6)">
-                <span class="option-emoji">💔</span>
-                <span class="option-text">Relaciones</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'En el área de la salud', 6)">
-                <span class="option-emoji">🙏</span>
-                <span class="option-text">En el área de la salud</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_5_question', 5, 'respuesta', 'Protección familiar', 6)">
-                <span class="option-emoji">🏠</span>
-                <span class="option-text">Protección familiar</span>
-              </button>
+            <div class="proof-section">
+              <div class="carousel-wrap">
+                <button class="carousel-arrow left" type="button" onclick="changeCarousel('top', -1)">‹</button>
+                <div class="carousel-stage">
+                  <img id="carousel-top-img" src="/imagem/3.webp" alt="Testimonio financiero 1">
+                </div>
+                <button class="carousel-arrow right" type="button" onclick="changeCarousel('top', 1)">›</button>
+              </div>
             </div>
+
+            <div class="proof-section">
+              <p class="proof-divider">
+                Y esto <strong>no es solo sobre temas financieros</strong>. Mira también otras bendiciones que hemos recibido:
+              </p>
+              <div class="carousel-wrap">
+                <button class="carousel-arrow left" type="button" onclick="changeCarousel('bottom', -1)">‹</button>
+                <div class="carousel-stage">
+                  <img id="carousel-bottom-img" src="/imagem/5.webp" alt="Otro testimonio 1">
+                </div>
+                <button class="carousel-arrow right" type="button" onclick="changeCarousel('bottom', 1)">›</button>
+              </div>
+            </div>
+
+            <button class="cta" type="button" onclick="handleContinueButton(13, 'step_12_social_prints', 12)">
+              <span class="btn-content">
+                <span>PROSEGUIR</span>
+                <span class="btn-arrow">→</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="step step-top" id="step-6" data-step="6">
+    <section class="step step-top" id="step-13" data-step="13">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 60%;"></span></div>
-          </div>
-
-          <div class="question-wrap">
-            <div class="small-badge">Pregunta 2</div>
-            <h2 class="question-title">¿Y qué es lo que más ha angustiado tu corazón?</h2>
-            <p class="question-support"></p>
-
-            <div class="options-wrap">
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Parece que todo sigue bloqueado', 8)">
-                <span class="option-emoji">😔</span>
-                <span class="option-text">Parece que todo sigue bloqueado</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Perdí la paz y vivo con miedo', 8)">
-                <span class="option-emoji">😣</span>
-                <span class="option-text">Perdí la paz y vivo con miedo</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Ya esperé demasiado y no aguanto más', 8)">
-                <span class="option-emoji">⏳</span>
-                <span class="option-text">Ya esperé demasiado y no aguanto más</span>
-              </button>
-              <button class="option-btn" type="button" onclick="handleOptionStep('step_6_question', 6, 'respuesta', 'Necesito una señal clara para continuar', 8)">
-                <span class="option-emoji">🕊️</span>
-                <span class="option-text">Necesito una señal clara para continuar</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="step step-top" id="step-7" data-step="7">
-      <div class="step-inner">
-        <div class="panel">
-          <div class="topbar">
-            <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 70%;"></span></div>
+            <div class="progress"><span style="width: 81%;"></span></div>
           </div>
 
           <div class="proof-wrap">
             <div class="small-badge">Aviso importante</div>
             <h2 class="proof-title">No llegaste hasta aquí por casualidad.</h2>
+
+            <div class="angel-image-wrap">
+              <div class="angel-image-card">
+                <img src="/imagem/2.webp" alt="Arcángel Miguel en primer plano" />
+              </div>
+            </div>
 
             <p class="proof-support">
               <strong>Existe una bendición</strong> lista para liberarse en tu vida.
@@ -3665,10 +4285,10 @@
             </p>
 
             <p class="proof-support">
-              Mira lo que les sucedió a las personas que decidieron creer y seguir hasta el final.
+              No dejes que este momento se escape. Continúa ahora para descubrir cómo recibir tu bendición.
             </p>
 
-            <button class="cta" type="button" onclick="handleContinueButton(8, 'step_7_proof', 7)">
+            <button class="cta" type="button" onclick="handleContinueButton(14, 'step_13_proof', 13)">
               <span class="btn-content">
                 <span>QUIERO CONTINUAR</span>
                 <span class="btn-arrow">→</span>
@@ -3679,58 +4299,54 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-8" data-step="8">
+    <section class="step step-top" id="step-14" data-step="14">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 80%;"></span></div>
+            <div class="progress"><span style="width: 88%;"></span></div>
           </div>
 
-          <div class="proof-wrap">
-            <div class="small-badge">Testimonios</div>
-            <h2 class="proof-title">Mira algunos testimonios que hemos recibido</h2>
+          <div class="question-wrap">
+            <h2 class="question-title">¿Estás listo(a) para reconectarte con tu ángel y disfrutar de una vida próspera y abundante a partir de hoy?</h2>
+            <div class="divider-soft"></div>
+            <p class="question-support"></p>
+
+            <div class="options-wrap">
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_14_commitment', 14, 'respuesta', 'Sí, es todo lo que más deseo', 15)">
+                <span class="option-emoji">🙏</span>
+                <span class="option-text">Sí, es todo lo que más deseo</span>
+              </button>
+              <button class="option-btn" type="button" onclick="handleOptionStep('step_14_commitment', 14, 'respuesta', 'Con certeza, lo quiero ahora', 15)">
+                <span class="option-emoji">🔥</span>
+                <span class="option-text">Con certeza, lo quiero ahora</span>
+              </button>
+            </div>
+
+            <div class="divider-soft"></div>
+
+            <p class="below-image commitment-carousel-label">Prepárate para bendiciones como estas:</p>
 
             <div class="proof-section">
               <div class="carousel-wrap">
-                <button class="carousel-arrow left" type="button" onclick="changeCarousel('top', -1)">‹</button>
+                <button class="carousel-arrow left" type="button" onclick="changeCarousel('commitment', -1)">‹</button>
                 <div class="carousel-stage">
-                  <img id="carousel-top-img" src="/imagem/3.webp" alt="Testimonio financiero 1">
+                  <img id="carousel-commitment-img" src="/imagem/12.webp" alt="Bendición 1">
                 </div>
-                <button class="carousel-arrow right" type="button" onclick="changeCarousel('top', 1)">›</button>
+                <button class="carousel-arrow right" type="button" onclick="changeCarousel('commitment', 1)">›</button>
               </div>
             </div>
-
-            <div class="proof-section">
-              <p class="proof-divider">
-                Esta oración <strong>no es solo sobre temas financieros</strong>. Mira también otros testimonios que hemos recibido.
-              </p>
-              <div class="carousel-wrap">
-                <button class="carousel-arrow left" type="button" onclick="changeCarousel('bottom', -1)">‹</button>
-                <div class="carousel-stage">
-                  <img id="carousel-bottom-img" src="/imagem/5.webp" alt="Otro testimonio 1">
-                </div>
-                <button class="carousel-arrow right" type="button" onclick="changeCarousel('bottom', 1)">›</button>
-              </div>
-            </div>
-
-            <button class="cta" type="button" onclick="handleContinueButton(9, 'step_8_social_prints', 8)">
-              <span class="btn-content">
-                <span>PROSEGUIR</span>
-                <span class="btn-arrow">→</span>
-              </span>
-            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="step step-centered" id="step-9" data-step="9">
+    <section class="step step-centered" id="step-15" data-step="15">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar">
             <button class="back-btn" type="button" onclick="prevStep()">←</button>
-            <div class="progress"><span style="width: 90%;"></span></div>
+            <div class="progress"><span style="width: 94%;"></span></div>
           </div>
 
           <div class="loading-wrap">
@@ -3758,7 +4374,7 @@
       </div>
     </section>
 
-    <section class="step step-top" id="step-10" data-step="10">
+    <section class="step step-top" id="step-16" data-step="16">
       <div class="step-inner">
         <div class="panel">
           <div class="topbar centered">
@@ -3766,8 +4382,14 @@
           </div>
 
           <div class="final-vsl-wrap">
-            <div class="small-badge">Oración liberada</div>
-            <h2 class="final-title">Ahora escucha con atención: este mensaje es para ti</h2>
+            <div class="small-badge">Bendición liberada</div>
+            <h2 class="final-title">Ahora escucha con atención: este mensaje es para ti 👇</h2>
+
+            <div class="final-info-card">
+              <p class="final-info-row"><span class="final-info-label">Nombre:</span> <span id="final-info-name">—</span></p>
+              <p class="final-info-row"><span class="final-info-label">Edad:</span> <span id="final-info-age">—</span></p>
+              <p class="final-info-row"><span class="final-info-label">Ángel de la Guarda:</span> <span id="final-info-element">Arcángel San Miguel</span></p>
+            </div>
 
             <div class="final-vsl-frame">
               <vturb-smartplayer id="vid-6a451fc152ce217437ec20de" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
@@ -3788,7 +4410,7 @@
               </a>
             </div>
 
-            <p class="note"><strong>Mira hasta el final</strong> para recibir la orientación completa.</p>
+            <p class="note"><strong>Mira hasta el final.</strong> No estás aquí por casualidad.</p>
           </div>
         </div>
       </div>
@@ -3858,9 +4480,9 @@
     const PARAMS_KEY = 'quiz_persisted_params';
     const FINAL_VTURB_PLAYER_ID = 'vid-6a451fc152ce217437ec20de';
     const FINAL_VTURB_SCRIPT_SRC = 'https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a451fc152ce217437ec20de/v4/player.js';
-    const FINAL_STEP = 10;
-    const LOADING_STEP = 9;
-    const ANGEL_LOADING_STEP = 3;
+    const FINAL_STEP = 16;
+    const LOADING_STEP = 15;
+    const ANGEL_LOADING_STEP = 10;
     const ANGEL_LOADING_DURATION = 5000;
     const ANGEL_CIRCLE_CIRCUMFERENCE = 2 * Math.PI * 52;
     const FINAL_HTML_CTA_SECONDS = 517; // 08:37
@@ -3875,14 +4497,20 @@
     const STEP_TRACK_NAMES = {
       1: 'step_1_intro',
       2: 'step_2_angel_birth',
-      3: 'step_3_angel_loading',
-      4: 'step_4_angel_reveal',
-      5: 'step_5_question',
-      6: 'step_6_question',
-      7: 'step_7_proof',
-      8: 'step_8_social_prints',
-      9: 'step_9_loading',
-      10: 'step_10_final_vsl'
+      3: 'step_3_angel_birth_day',
+      4: 'step_4_angel_birth_decade',
+      5: 'step_5_angel_birth_year',
+      6: 'step_6_marital_status',
+      7: 'step_7_question',
+      8: 'step_8_question',
+      9: 'step_9_name',
+      10: 'step_10_angel_loading',
+      11: 'step_11_angel_reveal',
+      12: 'step_12_social_prints',
+      13: 'step_13_proof',
+      14: 'step_14_commitment',
+      15: 'step_15_loading',
+      16: 'step_16_final_vsl'
     };
 
     const carousels = {
@@ -3897,6 +4525,12 @@
         animating: false,
         images: ['/imagem/5.webp', '/imagem/6.webp', '/imagem/7.webp', '/imagem/8.webp'],
         alts: ['Otro testimonio 1', 'Otro testimonio 2', 'Otro testimonio 3', 'Otro testimonio 4']
+      },
+      commitment: {
+        index: 0,
+        animating: false,
+        images: ['/imagem/12.webp', '/imagem/13.webp', '/imagem/14.webp', '/imagem/15.webp', '/imagem/16.webp'],
+        alts: ['Bendición 1', 'Bendición 2', 'Bendición 3', 'Bendición 4', 'Bendición 5']
       }
     };
 
@@ -4047,6 +4681,11 @@
       return firstName;
     }
 
+    function persistGender(gender) {
+      try { sessionStorage.setItem('quiz_gender', gender); } catch (e) {}
+      try { localStorage.setItem('quiz_gender', gender); } catch (e) {}
+    }
+
     function updateLoadingCopy() {
       const nameEl = document.getElementById('loading-name-text');
       const copyEl = document.getElementById('loading-copy-text');
@@ -4114,6 +4753,32 @@
     // Carrega o script do player VTurb (uma única vez) e expõe o CTA em HTML
     // que aparece depois de FINAL_HTML_CTA_SECONDS de vídeo assistido.
     // ========================================================================
+
+    function getStoredBirthYearValue() {
+      try {
+        return sessionStorage.getItem('quiz_birth_year') || localStorage.getItem('quiz_birth_year') || '';
+      } catch (e) {
+        return '';
+      }
+    }
+
+    function updateFinalInfoCard() {
+      const nameEl = document.getElementById('final-info-name');
+      const ageEl = document.getElementById('final-info-age');
+      if (!nameEl || !ageEl) return;
+
+      const firstName = getUserFirstName();
+      nameEl.textContent = firstName || '—';
+
+      const birthYear = parseInt(getStoredBirthYearValue(), 10);
+      if (birthYear) {
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+        ageEl.textContent = (age > 0 && age < 120) ? (age + ' años') : '—';
+      } else {
+        ageEl.textContent = '—';
+      }
+    }
 
     function ensureFinalVslLoaded(forceReload = false) {
       if (forceReload) {
@@ -4347,7 +5012,7 @@
 
       if (!cta.__finalHtmlCtaClickHooked) {
         cta.addEventListener('click', function (ev) {
-          try { safeTrackCtaClick('step_10_final_vsl', 10); } catch (e) {}
+          try { safeTrackCtaClick('step_16_final_vsl', 16); } catch (e) {}
           try { cta.href = appendPersistedParamsToUrl(FINAL_CHECKOUT_URL); } catch (e) {}
         });
         cta.__finalHtmlCtaClickHooked = true;
@@ -4453,6 +5118,14 @@
 
       window.scrollTo(0, 0);
 
+      if (stepNumber === 3) {
+        renderDayGrid();
+      }
+
+      if (stepNumber === 5) {
+        renderYearGrid();
+      }
+
       if (stepNumber === ANGEL_LOADING_STEP) {
         resetAngelLoadingState();
         setTimeout(startAngelLoading, 120);
@@ -4470,6 +5143,7 @@
       if (stepNumber === FINAL_STEP) {
         ensureFinalVslLoaded(false);
         setTimeout(initFinalVturbCTA, 350);
+        updateFinalInfoCard();
       } else {
         hideFinalExitModal();
       }
@@ -4504,7 +5178,7 @@
     function prevStep() {
       if (currentStep <= 1) return;
 
-      const previousStep = currentStep === 4 ? 2 : (currentStep === 8 ? 6 : currentStep - 1);
+      const previousStep = currentStep === 11 ? 9 : currentStep - 1;
       renderStep(previousStep);
       history.pushState({ quizStep: previousStep }, '', buildStepUrl(previousStep));
     }
@@ -4532,47 +5206,128 @@
       if (errorEl) errorEl.classList.remove('visible');
     }
 
-    function persistBirthInfo(year, day) {
-      try { sessionStorage.setItem('quiz_birth_year', year); } catch (e) {}
-      try { localStorage.setItem('quiz_birth_year', year); } catch (e) {}
-      try { sessionStorage.setItem('quiz_birth_day', day); } catch (e) {}
-      try { localStorage.setItem('quiz_birth_day', day); } catch (e) {}
+    function persistBirthMonth(month) {
+      try { sessionStorage.setItem('quiz_birth_month', month); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_month', month); } catch (e) {}
     }
 
-    function handleAngelStep() {
-      const yearInput = document.getElementById('birth-year');
-      const dayInput = document.getElementById('birth-day');
-      const year = yearInput ? yearInput.value.trim() : '';
-      const day = dayInput ? dayInput.value.trim() : '';
-
-      const yearValid = /^\d{4}$/.test(year);
-      const dayValid = /^\d{1,2}$/.test(day) && Number(day) >= 1 && Number(day) <= 31;
-
-      let hasError = false;
-      if (!yearValid) {
-        showNameFieldError(yearInput, 'birth-year-error');
-        hasError = true;
-      } else {
-        clearNameFieldError(yearInput, 'birth-year-error');
-      }
-
-      if (!dayValid) {
-        showNameFieldError(dayInput, 'birth-day-error');
-        hasError = true;
-      } else {
-        clearNameFieldError(dayInput, 'birth-day-error');
-      }
-
-      if (hasError) return;
-
-      persistBirthInfo(year, day);
-      safeTrackField('step_2_angel_birth', 2, 'birth_year', year);
-      safeTrackField('step_2_angel_birth', 2, 'birth_day', day);
+    function handleMonthSelect(month) {
+      persistBirthMonth(month);
+      safeTrackField('step_2_angel_birth', 2, 'birth_month', month);
       safeTrackStepAdvance(2);
       goToStep(3);
     }
 
-    function handleHeroNameStep() {
+    const DAYS_IN_MONTH = {
+      'Enero': 31,
+      'Febrero': 29,
+      'Marzo': 31,
+      'Abril': 30,
+      'Mayo': 31,
+      'Junio': 30,
+      'Julio': 31,
+      'Agosto': 31,
+      'Septiembre': 30,
+      'Octubre': 31,
+      'Noviembre': 30,
+      'Diciembre': 31
+    };
+
+    function getStoredBirthMonth() {
+      try {
+        return sessionStorage.getItem('quiz_birth_month') || localStorage.getItem('quiz_birth_month') || '';
+      } catch (e) {
+        return '';
+      }
+    }
+
+    function renderDayGrid() {
+      const grid = document.getElementById('day-grid');
+      if (!grid) return;
+
+      const month = getStoredBirthMonth();
+      const totalDays = DAYS_IN_MONTH[month] || 31;
+
+      let html = '';
+      for (let day = 1; day <= totalDays; day++) {
+        const label = day < 10 ? '0' + day : String(day);
+        html += '<button class="day-btn" type="button" onclick="handleDaySelect(' + day + ')">' + label + '</button>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function persistBirthDay(day) {
+      try { sessionStorage.setItem('quiz_birth_day', day); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_day', day); } catch (e) {}
+    }
+
+    function handleDaySelect(day) {
+      persistBirthDay(day);
+      safeTrackField('step_3_angel_birth_day', 3, 'birth_day', day);
+      safeTrackStepAdvance(3);
+      goToStep(4);
+    }
+
+    function persistBirthDecade(decade) {
+      try { sessionStorage.setItem('quiz_birth_decade', decade); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_decade', decade); } catch (e) {}
+    }
+
+    function handleDecadeSelect(decade) {
+      persistBirthDecade(decade);
+      safeTrackField('step_4_angel_birth_decade', 4, 'birth_decade', decade);
+      safeTrackStepAdvance(4);
+      goToStep(5);
+    }
+
+    function getStoredBirthDecade() {
+      try {
+        return sessionStorage.getItem('quiz_birth_decade') || localStorage.getItem('quiz_birth_decade') || '';
+      } catch (e) {
+        return '';
+      }
+    }
+
+    function renderYearGrid() {
+      const grid = document.getElementById('year-grid');
+      if (!grid) return;
+
+      const decade = parseInt(getStoredBirthDecade(), 10) || 1990;
+
+      let html = '';
+      for (let i = 0; i < 10; i++) {
+        const year = decade + i;
+        const isLast = i === 9;
+        html += '<button class="year-btn' + (isLast ? ' year-btn-full' : '') + '" type="button" onclick="handleYearSelect(' + year + ')">' + year + '</button>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function persistBirthYear(year) {
+      try { sessionStorage.setItem('quiz_birth_year', year); } catch (e) {}
+      try { localStorage.setItem('quiz_birth_year', year); } catch (e) {}
+    }
+
+    function handleYearSelect(year) {
+      persistBirthYear(year);
+      safeTrackField('step_5_angel_birth_year', 5, 'birth_year', year);
+      safeTrackStepAdvance(5);
+      goToStep(6);
+    }
+
+    function persistMaritalStatus(status) {
+      try { sessionStorage.setItem('quiz_marital_status', status); } catch (e) {}
+      try { localStorage.setItem('quiz_marital_status', status); } catch (e) {}
+    }
+
+    function handleMaritalSelect(status) {
+      persistMaritalStatus(status);
+      safeTrackField('step_6_marital_status', 6, 'marital_status', status);
+      safeTrackStepAdvance(6);
+      goToStep(7);
+    }
+
+    function handleNameStep() {
       const input = document.getElementById('user-name');
       const name = input ? input.value.trim() : '';
 
@@ -4583,7 +5338,14 @@
       clearNameFieldError(input, 'user-name-error');
 
       persistUserFirstName(name);
-      safeTrackField('step_1_intro', 1, 'name', name);
+      safeTrackField('step_9_name', 9, 'name', name);
+      safeTrackStepAdvance(9);
+      goToStep(10);
+    }
+
+    function handleGenderSelect(gender) {
+      persistGender(gender);
+      safeTrackField('step_1_intro', 1, 'gender', gender);
       safeTrackStepAdvance(1);
       goToStep(2);
     }
@@ -4686,7 +5448,7 @@
       }
     });
 
-    ['user-name', 'birth-year', 'birth-day'].forEach(function (inputId) {
+    ['user-name'].forEach(function (inputId) {
       const el = document.getElementById(inputId);
       if (!el) return;
       el.addEventListener('input', function () {
