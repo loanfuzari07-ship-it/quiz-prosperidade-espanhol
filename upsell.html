@@ -6,9 +6,9 @@
 <title>No accedas antes de ver esto - Templo Divino</title>
 
 <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
-<link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a495a9f8e6249c9520ee03d/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a5005c58b3cfc0308395d55/v4/player.js" as="script">
 <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/6a4959fc12467ad3e496cf05/main.m3u8" as="fetch">
+<link rel="preload" href="https://cdn.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/6a50054c4ddd117f39be03f6/main.m3u8" as="fetch">
 <link rel="dns-prefetch" href="https://cdn.converteai.net">
 <link rel="dns-prefetch" href="https://scripts.converteai.net">
 <link rel="dns-prefetch" href="https://images.converteai.net">
@@ -45,10 +45,7 @@
   body {
     position: relative;
     isolation: isolate;
-    background:
-      radial-gradient(circle at 50% -12%, rgba(244, 216, 136, .13), transparent 34%),
-      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .08), transparent 24%),
-      linear-gradient(180deg, var(--page-dark-2), var(--page-dark) 50%, #050b10);
+    background: #ffffff;
     color: var(--ink);
     font-family: 'Lora', Georgia, serif;
     min-height: 100svh;
@@ -78,67 +75,14 @@
   }
 
   .alert-title {
-    margin: 0 0 8px;
+    margin: 0;
     font-family: 'Cinzel', serif;
-    font-size: clamp(15px, 4.6vw, 21px);
+    font-size: clamp(14px, 4.2vw, 18px);
     font-weight: 800;
     letter-spacing: .01em;
     color: #ffe27a;
     text-shadow: 0 2px 6px rgba(0,0,0,.4);
-    line-height: 1.3;
-  }
-
-  .alert-subtitle {
-    margin: 0 0 14px;
-    font-family: 'Cinzel', serif;
-    font-size: clamp(12px, 3.4vw, 15px);
-    font-weight: 700;
-    letter-spacing: .04em;
-    color: #fff8ea;
-    text-transform: uppercase;
-  }
-
-  .alert-progress-track {
-    position: relative;
-    width: min(100%, 520px);
-    height: 26px;
-    margin: 0 auto;
-    border-radius: 999px;
-    background: rgba(255,255,255,.92);
-    border: 1px solid rgba(0,0,0,.15);
-    overflow: hidden;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,.18);
-  }
-
-  .alert-progress-fill {
-    position: absolute;
-    inset: 0;
-    width: 0%;
-    border-radius: 999px;
-    background: linear-gradient(90deg, #3fae6a 0%, #58c983 100%);
-    animation: alertProgress 22s cubic-bezier(.14,.75,.24,1) forwards;
-  }
-
-  .alert-progress-label {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cinzel', serif;
-    font-size: 13px;
-    font-weight: 800;
-    color: #123018;
-    z-index: 2;
-  }
-
-  @keyframes alertProgress {
-    0%   { width: 0%; }
-    20%  { width: 38%; }
-    45%  { width: 61%; }
-    70%  { width: 79%; }
-    90%  { width: 91%; }
-    100% { width: 96%; }
+    line-height: 1.4;
   }
 
   /* ===================== CONTEÚDO PRINCIPAL ===================== */
@@ -157,16 +101,8 @@
     font-size: clamp(19px, 5.4vw, 25px);
     font-weight: 800;
     line-height: 1.34;
-    color: var(--cream);
+    color: #000;
     letter-spacing: -.005em;
-  }
-
-  .headline .accent {
-    text-decoration: underline;
-    text-decoration-color: var(--gold-3);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    color: #fff;
   }
 
   .subheadline {
@@ -177,8 +113,8 @@
     font-size: clamp(14px, 3.9vw, 17px);
     font-weight: 700;
     line-height: 1.42;
-    color: var(--gold-3);
-    text-shadow: 0 0 16px rgba(244,216,136,.28);
+    color: #000;
+    text-shadow: none;
   }
 
   /* ===================== BLOCO DO VÍDEO (VTURB) ===================== */
@@ -244,11 +180,11 @@
   }
 
   .offer-meta p:first-child {
-    color: var(--cream);
+    color: var(--ink);
   }
 
   .offer-meta p:last-child {
-    color: var(--gold-3);
+    color: var(--gold);
   }
 
   /* ===================== ÁREA DO WIDGET DA HOTMART ===================== */
@@ -277,22 +213,17 @@
 
   <!-- ===================== BARRA DE ALERTA (TOPO) ===================== -->
   <div class="alert-bar">
-    <p class="alert-title">⚠️ ESPERA: NO SALGAS NI ACTUALICES ESTA PÁGINA...</p>
-    <p class="alert-subtitle">Tu acceso se está finalizando...</p>
-    <div class="alert-progress-track">
-      <div class="alert-progress-fill"></div>
-      <div class="alert-progress-label">Procesando...</div>
-    </div>
+    <p class="alert-title">⚠️ ADVERTENCIA: No cierres esta página ni hagas clic en el botón "Atrás" para evitar un posible cobro duplicado.</p>
   </div>
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <div class="page">
     <h1 class="headline">
-      <span class="accent">NO ACCEDAS a tu Oración Consagrada</span> antes de ver esto 👇
+      🎉 Felicidades, has sido seleccionado para una clase exclusiva
     </h1>
 
     <p class="subheadline">
-      ESTE PRÓXIMO PASO PUEDE SER DECISIVO PARA EL ÉXITO DE TU VIDA PRÓSPERA Y ABUNDANTE
+      Mira el video de abajo 👇
     </p>
 
     <div class="video-frame">
@@ -307,14 +238,14 @@
           ============================================================
         -->
         <div id="vturb-upsell-slot" style="width:100%;">
-          <vturb-smartplayer id="vid-6a495a9f8e6249c9520ee03d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
-          <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a495a9f8e6249c9520ee03d/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+          <vturb-smartplayer id="vid-6a5005c58b3cfc0308395d55" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
+          <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/15c55340-cc1a-4abb-9c8a-da5918cd9642/players/6a5005c58b3cfc0308395d55/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
         </div>
       </div>
     </div>
 
     <div class="offer-meta" id="upsell-offer-meta">
-      <p>Pago único · Acceso inmediato</p>
+      <p>Pago único</p>
       <p>30 días de garantía total sin preguntas</p>
     </div>
 
@@ -365,7 +296,7 @@
     // está efectivamente reproduciéndose (currentTime del player).
     // ============================================================
     (function () {
-      var CTA_REVEAL_SECONDS = 439; // 07:19
+      var CTA_REVEAL_SECONDS = 455; // 07:35
       var hooked = false;
       var attempts = 0;
 
