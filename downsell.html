@@ -35,10 +35,7 @@
   body {
     position: relative;
     isolation: isolate;
-    background:
-      radial-gradient(circle at 50% -12%, rgba(244, 216, 136, .13), transparent 34%),
-      radial-gradient(circle at 0% 18%, rgba(255, 248, 235, .06), transparent 24%),
-      linear-gradient(180deg, var(--page-dark-2), var(--page-dark) 50%, #050b10);
+    background: #ffffff;
     color: var(--ink);
     font-family: 'Lora', Georgia, serif;
     min-height: 100svh;
@@ -102,11 +99,11 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 1.55;
-    color: var(--ink-soft);
+    color: #000;
   }
 
   .copy-text .accent {
-    color: var(--gold-2);
+    color: var(--warn-red-2);
     font-weight: 700;
   }
 
@@ -115,7 +112,7 @@
     font-size: 16.5px;
     font-weight: 700;
     line-height: 1.55;
-    color: var(--cream);
+    color: #000;
     letter-spacing: -.005em;
   }
 
@@ -124,6 +121,37 @@
     height: 1px;
     margin: 0 auto 26px;
     background: linear-gradient(90deg, transparent, var(--line), transparent);
+  }
+
+  .down-image-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 4px auto 22px;
+    padding: 7px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #f7e3b0 0%, #d5a040 34%, #f7e5b8 100%);
+    box-shadow:
+      0 16px 32px rgba(0,0,0,.16),
+      inset 0 1px 0 rgba(255,255,255,.80);
+  }
+
+  .down-image-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 836 / 471;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #0b1320;
+    border: 1px solid rgba(168,110,13,.6);
+  }
+
+  .down-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
   }
 
   /* ===================== BLOCO DE PREÇO ===================== */
@@ -138,10 +166,10 @@
     font-family: 'Cinzel', serif;
     font-size: 22px;
     font-weight: 700;
-    color: #d97a6f;
+    color: var(--warn-red-2);
     text-decoration: line-through;
     text-decoration-thickness: 2px;
-    opacity: .8;
+    opacity: .85;
   }
 
   .price-label {
@@ -150,11 +178,11 @@
     font-size: 13.5px;
     font-weight: 700;
     letter-spacing: .03em;
-    color: var(--ink-soft);
+    color: #000;
   }
 
   .price-label .off {
-    color: #ff6b5e;
+    color: var(--warn-red-2);
     font-weight: 800;
   }
 
@@ -163,9 +191,13 @@
     font-family: 'Cinzel', serif;
     font-size: 52px;
     font-weight: 800;
-    color: var(--green-2);
+    color: #000;
     letter-spacing: -.01em;
-    text-shadow: 0 0 24px rgba(79, 214, 133, .35);
+    text-shadow: none;
+  }
+
+  .price-new-green {
+    color: var(--green);
   }
 
   .urgency-text {
@@ -175,8 +207,12 @@
     font-size: 15px;
     font-weight: 700;
     line-height: 1.45;
-    color: var(--gold-3);
-    text-shadow: 0 0 14px rgba(244,216,136,.22);
+    color: var(--warn-red-2);
+    text-shadow: none;
+  }
+
+  .urgency-text-black {
+    color: #000;
   }
 
   /* ===================== INFORMAÇÕES DA OFERTA ===================== */
@@ -194,11 +230,11 @@
   }
 
   .offer-meta p:first-child {
-    color: var(--cream);
+    color: #000;
   }
 
   .offer-meta p:last-child {
-    color: var(--gold-2);
+    color: var(--warn-red-2);
   }
 
   /* ===================== ÁREA DO WIDGET DA HOTMART ===================== */
@@ -224,33 +260,50 @@
 
   <!-- ===================== BARRA DE DESTAQUE (TOPO) ===================== -->
   <div class="alert-bar">
-    <p class="alert-title">ACABAS DE GANAR UN <span class="highlight">50% DE DESCUENTO</span></p>
+    <p class="alert-title">ACABAS DE GANAR UNA <span class="highlight">OPORTUNIDAD ÚNICA</span></p>
   </div>
 
   <!-- ===================== CONTEÚDO PRINCIPAL ===================== -->
   <div class="page">
     <p class="copy-text emphasis">
-      Realmente quiero que puedas comenzar tu camino de <span class="accent">prosperidad y abundancia</span> con la máxima fuerza, uniendo el poder de la <span class="accent">Oración Consagrada del Arcángel Miguel</span> + <span class="accent">La Jornada con Mi Ángel</span>.
+      Entiendo que $27 en este momento puede ser mucho…
     </p>
 
     <p class="copy-text emphasis">
-      Por eso, te estamos ofreciendo un súper <span class="accent">descuento del 50%</span> para que puedas asegurar tu acceso a la <span class="accent">Jornada con Mi Ángel</span> ahora mismo 👇
+      Pero realmente quiero que puedas comenzar tu camino de sanación, prosperidad y paz con la máxima fuerza, y de la manera correcta, uniendo el poder de la <span class="accent">Jornada con Mi Ángel</span> + la <span class="accent">Ceremonia de Sellado del Nombre</span>.
+    </p>
+
+    <div class="down-image-wrap">
+      <div class="down-image-card">
+        <img src="/imagem/up1.webp" alt="Jornada con Mi Ángel + Ceremonia de Sellado del Nombre" />
+      </div>
+    </div>
+
+    <p class="copy-text emphasis">
+      Por eso, estamos ofreciéndote una oportunidad ÚNICA, para que puedas asegurar tu lugar en la <span class="accent">Ceremonia de Sellado del Nombre</span> y mantenerte entre los 50 elegidos 👇
     </p>
 
     <div class="divider"></div>
 
-    <div class="price-block">
-      <div class="price-old">$19</div>
-      <p class="price-label">Precio exclusivo en esta página (<span class="off">50% OFF</span>):</p>
-      <span class="price-new">$9.50</span>
-    </div>
+    <p class="copy-text emphasis">
+      Solo hoy, y únicamente en esta página, puedes asegurar tu lugar con un descuento exclusivo:
+    </p>
 
-    <p class="urgency-text">Pero tienes que decidir ahora, no volverás a ver este precio después 👇</p>
+    <div class="price-block">
+      <div class="price-old">US$27</div>
+      <p class="price-label">POR SOLO</p>
+      <span class="price-new price-new-green">US$14</span>
+    </div>
 
     <div class="offer-meta">
-      <p>Pago único · Acceso inmediato</p>
-      <p>30 días de garantía total sin preguntas</p>
+      <p>Pago único</p>
+      <p>30 días de garantía de reembolso</p>
     </div>
+
+    <p class="urgency-text">
+      Pero debes decidir ahora.<br>
+      <span class="urgency-text-black">Después de salir de esta página, nunca más verás este precio y podrías perder la mayor oportunidad de sellar las bendiciones de tu vida 👇</span>
+    </p>
 
     <!--
       ============================================================
